@@ -1,0 +1,11 @@
+
+name=$(youtube-dl -e $1)
+
+if [[ $# == 1 || $2 != q ]]
+        then f=$(ls "./$(youtube-dl -e $1)"*)
+        mv "$f" "${f// /_}"
+
+        else
+        change
+fi
+
