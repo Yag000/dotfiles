@@ -57,6 +57,13 @@ alias gytmy_gl="firefox https://gaufre.informatique.univ-paris-diderot.fr/iglesi
 
 # Fast access to programs
 
+alias nvimconfig="nvim ~/.config/nvim"
+alias nvimpacker="nvim ~/.config/nvim/lua/yago/packer.lua"
+
+alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}'"
+
+alias config="cd /home/yago/dotfiles/ && nvim ."
+
 alias python=python3
 alias py=python3
 
