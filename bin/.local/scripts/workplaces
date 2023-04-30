@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+
+workplaces_dir=~/dotfiles/ressources/workplaces.txt
+
+if [[ $# -eq 1 ]]; then
+ find ~/Documents/l2_math-info ~/Documents/Archivos/Programas/projects ~/dotfiles -name .git -exec dirname {} \; -prune > $workplaces_dir
+else
+    cat $workplaces_dir
+fi
+

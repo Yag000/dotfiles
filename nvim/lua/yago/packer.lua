@@ -62,8 +62,8 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" },
 		},
 	})
-	
-    use({
+
+	use({
 		"folke/trouble.nvim",
 		config = function()
 			require("trouble").setup({
@@ -75,11 +75,16 @@ return require("packer").startup(function(use)
 		end,
 	})
 
-	use("m4xshen/autoclose.nvim")
 	use("github/copilot.vim")
 
 	use("ThePrimeagen/vim-be-good")
 	use("eandrju/cellular-automaton.nvim")
 
 	use("jose-elias-alvarez/null-ls.nvim")
+
+	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+
+	-- auto closing
+	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tagsuse("m4xshen/autoclose.nvim")
 end)
