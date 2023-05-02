@@ -1,3 +1,3 @@
 # dotfiles
 
-May personal dotfiles
+My personal dotfiles
