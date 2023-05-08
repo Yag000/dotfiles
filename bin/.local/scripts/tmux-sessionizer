@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 # Credits to @ThePrimeagen, original creator of this script, available at:
-# https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer 
+# https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer
 
- 
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$( workplaces | fzf)
+    selected=$( workplaces |
+        fzf
+    )
 fi
 
 if [[ -z $selected ]]; then
@@ -24,6 +26,11 @@ fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
     tmux new-session -ds $selected_name -c $selected
+fi
+
+if [[ -z "$TMUX" ]]; then
+    tmux attach-session -t $selected_name
+    exit 0
 fi
 
 tmux switch-client -t $selected_name
