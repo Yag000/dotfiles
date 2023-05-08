@@ -8,7 +8,16 @@ if [[ $# -eq 1 ]]; then
     selected=$1
 else
     selected=$( workplaces |
-        fzf
+        while read -r line; do
+            #echo $line
+            #zoxide_query=$(zoxide query -l -s "$line/")
+            #[[ -z $zoxide_query ]] && echo "0 $line" && continue
+            #echo $zoxide_query
+            zoxide query -l -s "$line/"
+        done |
+        sort -rnk1 |  # sort by zoxide score (first column)
+        awk -F ' ' '{print $2}'| 
+        fzf --no-sort   # pipe to fzf without its sorting
     )
 fi
 
