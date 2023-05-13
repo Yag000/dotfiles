@@ -7,16 +7,19 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
+    # TODO: Imporve this setup
     selected=$( workplaces |
         while read -r line; do
             #echo $line
-            #zoxide_query=$(zoxide query -l -s "$line/")
-            #[[ -z $zoxide_query ]] && echo "0 $line" && continue
+            zoxide_query=$(zoxide query -l -s "$line/")
             #echo $zoxide_query
-            zoxide query -l -s "$line/"
+            [[ -z $zoxide_query ]] && echo "0 $line" && continue
+            echo $zoxide_query
+            # zoxide query -l -s "$line/"
         done |
+        (cat -; echo "50 /home/yago/dotfiles") |
         sort -rnk1 |  # sort by zoxide score (first column)
-        awk -F ' ' '{print $2}'| 
+        awk -F ' ' '{print $2}' |
         fzf --no-sort   # pipe to fzf without its sorting
     )
 fi
