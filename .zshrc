@@ -81,7 +81,7 @@ plugins=(
     git
     zsh-autosuggestions 
     copyfile 
-    history 
+    zsh-history-substring-search
     z 
     zsh-syntax-highlighting
     zsh-autosuggestions
@@ -124,7 +124,6 @@ export PATH="$HOME/dotfiles/bin/.local/scripts/:$HOME/.elan/bin:$PATH"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
