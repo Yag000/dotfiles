@@ -98,7 +98,7 @@ source ~/.aliases
 source ~/.functions
 source ~/.zsh_profile
 
-export PATH="$HOME/dotfiles/bin/.local/scripts/:$PATH"
+export PATH="$HOME/dotfiles/bin/.local/scripts/:$HOME/.elan/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
