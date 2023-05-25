@@ -95,5 +95,6 @@ export QUOTING_STYLE=literal
 
 # Alias definitions.
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
-[[ -f "$HOME/.functions" ]] && source "$HOME/.funcions"
+[[ -f "$HOME/.functions" ]] && source "$HOME/.functions"
 
+. "$HOME/.cargo/env"
