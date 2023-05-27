@@ -12,8 +12,8 @@ return require("packer").startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
-	
-    use({
+
+	use({
 		"navarasu/onedark.nvim",
 		as = "onedark",
 		config = function()
@@ -149,4 +149,6 @@ return require("packer").startup(function(use)
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tagsuse("m4xshen/autoclose.nvim")
+
+	use("norcalli/nvim-colorizer.lua") -- colorize hex codes, etc...
 end)

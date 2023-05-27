@@ -17,6 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+XDG_CONFIG_HOME="$HOME/.config"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -130,3 +131,4 @@ export PATH="$HOME/dotfiles/bin/.local/scripts/:$HOME/.local/bin:$HOME/.elan/bin
 
 # opam configuration
 [[ ! -r /home/yago/.opam/opam-init/init.zsh ]] || source /home/yago/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+fpath+=${ZDOTDIR:-~}/.zsh_functions
