@@ -98,7 +98,7 @@ source ~/.aliases
 source ~/.functions
 source ~/.zsh_profile
 
-export PATH="$HOME/dotfiles/bin/.local/scripts/:$HOME/.elan/bin:$PATH"
+export PATH="$HOME/dotfiles/bin/.local/scripts/:$HOME/.local/bin:$HOME/.elan/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -127,3 +127,6 @@ export PATH="$HOME/dotfiles/bin/.local/scripts/:$HOME/.elan/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# opam configuration
+[[ ! -r /home/yago/.opam/opam-init/init.zsh ]] || source /home/yago/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

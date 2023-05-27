@@ -12,8 +12,8 @@ return require("packer").startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
-
-	use({
+	
+    use({
 		"navarasu/onedark.nvim",
 		as = "onedark",
 		config = function()
@@ -22,12 +22,22 @@ return require("packer").startup(function(use)
 	})
 
 	-- use({ 'rose-pine/neovim', as = 'rose-pine', config = function()
-	-- 	vim.cmd('colorscheme rose-pine')
+	--	vim.cmd('colorscheme rose-pine')
 	-- end
+	--})
+
+	-- use({
+	--    "folke/tokyonight.nvim",
+	--    as = "tokyonigh",
+
+	--    run = function()
+	--        vim.cmd("colorscheme tokyonight")
+	--    end,
 	-- })
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
+
 		run = function()
 			local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
 			ts_update()
@@ -139,5 +149,4 @@ return require("packer").startup(function(use)
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
 	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tagsuse("m4xshen/autoclose.nvim")
-
 end)
