@@ -196,7 +196,7 @@ bindsym $mod+r mode "resize"
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #fff8ea
-set $inactive-text-color #676E7D
+set $inactive-text-color #5c6270
 set $urgent-bg-color     cbb3ff
 set $default-indicator   #00ff00
 
@@ -210,10 +210,11 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # bar
 bar {
 
+    font pango:monosmpace 9
     status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
 	colors {
 		background $bg-color
-	    	separator #757575
+	    separator #757575
 		#                  border             background         text
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color

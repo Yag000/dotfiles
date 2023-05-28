@@ -21,6 +21,7 @@ my $acpi;
 my $status;
 my $percent;
 my $text;
+my $color;
 my $bat_number = $ENV{BLOCK_INSTANCE} || 0;
 
 # read the first line of the "acpi" command output
@@ -35,36 +36,32 @@ if ($acpi !~ /: (\w+), (\d+)%/) {
 
 $status = $1;
 $percent = $2;
-$text = "$percent%";
-
-
 
 # ------ Yago additions ------
 if($status eq 'Discharging') {
-    # I can't get the colors to work, so I'm just using the icons
     if ($percent < 5) {
-        #print"#FF0000";
-        print " ";
+        $text = " ";
+        $color="#FF0000";
     } elsif ($percent <  25 ) {
-        #print "#ff6600";
-        print " ";
+        $text = " ";
     } elsif ($percent < 50) {
-        #print "#ffff00";
-        print " ";
+        $text = " ";
     } elsif ($percent < 75) {
-        #print "#99ff00";
-        print " ";
+        $text =" ";
     } else {
-        #print "#00ff00";
-        print " ";
+        $text = " ";
     }
 } else {
-    print " ";
+    $text = " ";
 }
 
+$text .= "$percent%";
+
+
 # ---------------------------
-# print text
-print "$text";
+print "$text\n";
+print "$text\n";
+print "$color";
 
 # consider urgent flag only on discharge
 if ($status eq 'Discharging' && $percent < 5) {
