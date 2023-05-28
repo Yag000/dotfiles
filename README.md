@@ -15,7 +15,7 @@ WIP
 ### i3
 
 - [x] i3 Blocks (Battery, Volume, Date, Time, etc.)
-- [ ] i3 Lock
+- [x] i3 Lock
 - [ ] i3 Wallpaper on startup (it doesn't work with feh for some bizarre reason)
 - [ ] Keybind for changing Wallpaper
 - [ ] Keybind for changing keyboard layout
@@ -41,5 +41,5 @@ WIP
 
 ### tmux
 
-- [ ] Make tmux theme work
+- [x] Make tmux theme work
 - [ ] Improve tmux sessions (searching them)

@@ -210,7 +210,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 # bar
 bar {
 
-    font pango:monosmpace 9
+    font pango:monospace 9
     status_command i3blocks -c $HOME/.config/i3/i3blocks.conf
 	colors {
 		background $bg-color
@@ -219,12 +219,15 @@ bar {
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
+    }
 }
 
 # dmenu alternative: rofi, using an assortment of launchers from: https://github.com/adi1090x/rofi
 bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-5/launcher.sh
 
+# Lock
+bindsym $mod+shift+x exec $HOME/.config/i3/lock
+exec --no-startup-id $HOME/.config/i3/locker
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)
@@ -241,6 +244,7 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 exec --no-startup-id firefox
 exec --no-startup-id i3-msg "workspace $ws2; exec i3-sensible-terminal"
 exec --no-startup-id discord
+
 
 # Set keyboard layout (temporary)
 exec setxkbmap eu     
