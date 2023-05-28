@@ -21,8 +21,10 @@ WIP
 - [ ] Keybind for changing keyboard layout
 - [ ] Keybind for monitor layout
 - [ ] Mute on startup
+- [ ] Mute after disconnecting Bluetooth
 - [ ] Add i3block for keyboard layout
-- [ ] Add clicable i3blocks
+- [ ] Add clickable i3blocks
+- [ ] Add colors to i3blocks
 
 ### Neovim
 

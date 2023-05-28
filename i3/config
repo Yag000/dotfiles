@@ -241,6 +241,9 @@ exec --no-startup-id firefox
 exec --no-startup-id i3-msg "workspace $ws2; exec i3-sensible-terminal"
 exec --no-startup-id discord
 
+# Set keyboard layout (temporary)
+exec setxkbmap eu     
+
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id wallpaper_updater
 
