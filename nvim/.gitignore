@@ -1,5 +1,6 @@
 Testing/
 plugin/
+!after/plugin/
 mason/
 site/
 rplugin.vim

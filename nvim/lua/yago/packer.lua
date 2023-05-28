@@ -13,13 +13,13 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-	use({
-		"navarasu/onedark.nvim",
-		as = "onedark",
-		config = function()
-			vim.cmd("colorscheme onedark")
-		end,
-	})
+	-- use({
+	--	"navarasu/onedark.nvim",
+	--	as = "onedark",
+	--	config = function()
+	--		vim.cmd("colorscheme onedark")
+	--	end,
+	--})
 
 	-- use({ 'rose-pine/neovim', as = 'rose-pine', config = function()
 	--	vim.cmd('colorscheme rose-pine')
@@ -34,6 +34,8 @@ return require("packer").startup(function(use)
 	--        vim.cmd("colorscheme tokyonight")
 	--    end,
 	-- })
+
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	use({
 		"nvim-treesitter/nvim-treesitter",
