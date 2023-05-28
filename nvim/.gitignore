@@ -1,4 +1,10 @@
 Testing/
 plugin/
-wishlist.txt
+mason/
+site/
+rplugin.vim
+.netrwhist
+harpoon.json
+telescope_history
+
 
