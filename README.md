@@ -20,6 +20,9 @@ WIP
 - [ ] Keybind for changing Wallpaper
 - [ ] Keybind for changing keyboard layout
 - [ ] Keybind for monitor layout
+- [ ] Mute on startup
+- [ ] Add i3block for keyboard layout
+- [ ] Add clicable i3blocks
 
 ### Neovim
 
@@ -37,3 +40,4 @@ WIP
 ### tmux
 
 - [ ] Make tmux theme work
+- [ ] Improve tmux sessions (searching them)
