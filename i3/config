@@ -250,5 +250,5 @@ exec --no-startup-id discord
 exec setxkbmap eu     
 
 exec_always --no-startup-id picom -b
-exec_always --no-startup-id wallpaper_updater
+exec_always --no-startup-id $HOME/dotfiles/bin/.local/scripts/wallpaper_updater
 

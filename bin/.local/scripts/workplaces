@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 
 workplaces_dir=~/dotfiles/ressources/workplaces.txt

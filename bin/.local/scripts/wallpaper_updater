@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 FILES=($HOME/Pictures/Wallpapers/*)
 WALLPAPER=${FILES[$RANDOM % ${#FILES[@]}]}
 feh --bg-scale $WALLPAPER

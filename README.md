@@ -16,7 +16,7 @@ WIP
 
 - [x] i3 Blocks (Battery, Volume, Date, Time, etc.)
 - [x] i3 Lock
-- [ ] i3 Wallpaper on startup (it doesn't work with feh for some bizarre reason)
+- [x] i3 Wallpaper on startup (it doesn't work with feh for some bizarre reason)
 - [ ] Keybind for changing Wallpaper
 - [ ] Keybind for changing keyboard layout
 - [ ] Keybind for monitor layout
@@ -28,6 +28,7 @@ WIP
 
 ### Neovim
 
+- [ ] Solve issue with empty padding on the right
 - [ ] Markdown preview
 - [ ] Markdown linting
 - [ ] Markdown formatting
