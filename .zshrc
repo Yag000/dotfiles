@@ -78,6 +78,11 @@ XDG_CONFIG_HOME="$HOME/.config"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# This must be done before the oh-my-zsh.sh is sourced 
+# (in particular before the loading of the zsh-syntax-highlighting plugin)
+source ~/.zsh/catppuccin_frappe-zsh-syntax-highlighting.zsh
+
 plugins=(
     git
     zsh-autosuggestions 
