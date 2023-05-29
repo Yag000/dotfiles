@@ -4,12 +4,6 @@
 
 # Go to directory
 ## University
-alias go_s3="cd /home/yago/Documents/l2_math-info/s3"
-alias go_POO="go_s3 && cd POO/l2_s3_POO"
-alias go_automates="go_s3 && cd /automates/l2_s3_Automates"
-alias go_poo3jeux="go_s3 && cd POO/poo3jeux"
-alias go_pong="go_s3 && cd pre-pro/pong/"
-alias pongrun="go_pong && bash gradlew r"
 
 alias go_s4="cd /home/yago/Documents/l2_math-info/s4"
 alias go_langagec="go_s4 && cd C"
@@ -33,36 +27,10 @@ alias go_scripts="cd /home/yago/My_scripts"
 alias go_secret_hermes="go_projects && cd Secret-Hermes"
 alias go_herubot="go_projects && cd herubot"
 
-# Fast Acces vscode projects
-
-alias code_AlphaGo="go_AlphaGo && code ."
-alias code_gytmy="go_gytmy && code ."
-alias code_rapport_gytmy="go_rapport_gytmy && code ."
-alias code_scripts="go_scripts && code ."
-alias code_cproject="go_c-project && code ."
-alias code_AoC="go_AoC && code ."
-alias code_secret_hermes="go_secret_hermes && code ."
-alias code_herubot="go_herubot && code ."
-alias code_DM3="cd /home/yago/Documents/l2_math-info/s4/MM4/DM3 && code . && xdg-open 2022-23_DM3\ \(1\).pdf  && xdg-open Main.pdf"
-
-# University Moodle
-
-alias moodle="firefox 'https://moodle.u-paris.fr'"
-alias moodle_mm4="firefox 'https://moodle.u-paris.fr/course/view.php?id=2423'"
-alias moodle_proba="firefox 'https://moodle.u-paris.fr/course/view.php?id=2427'"
-alias moodle_c4="firefox 'https://moodle.u-paris.fr/course/view.php?id=1633'"
-alias moodle_ea4="firefox 'https://moodle.u-paris.fr/course/view.php?id=1637'"
-
-alias gytmy_gl="firefox https://gaufre.informatique.univ-paris-diderot.fr/iglesias/2022-sb1-ga-gytmy"
 
 # Fast access to programs
 
-alias nvimconfig="nvim ~/.config/nvim"
-alias nvimpacker="nvim ~/.config/nvim/lua/yago/packer.lua"
-
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}'"
-
-alias config="cd /home/yago/dotfiles/ && nvim ."
 
 alias python=python3
 alias py=python3
@@ -73,30 +41,12 @@ alias vsc="code"
 alias vim="nvim"
 alias v="nvim"
 
-alias joyswitch="cd  /home/yago/joycond-cemuhook && python3 joycond-cemuhook.py"
-alias audioConverter="/home/yago/My_scripts/freac-1.1.5-linux-x86_64.AppImage"
-alias logisim="java -jar /home/yago/My_scripts/Logisim-ITA.jar"
-
 alias vscode-java='code $(find . -name "*.java")'
 alias vscode-python='code $(find . -name "*.py")'
 alias vscode-ocaml='code $(find . -name "*.ml")'
 alias vscode-c='code $(find . -name "*.c")'
 
-alias mindustry="cd /home/yago/Games/Mindustry && ./gradlew desktop:run"
-
-# Personal scripts
-
-alias to_="/home/yago/My_scripts/change.sh"
-alias name="/home/yago/My_scripts/name.sh"
-alias convertMp3="/home/yago/My_scripts/convertMp3.sh"
-alias ytmp3="/home/yago/My_scripts/ytmp3.sh"
-alias create_move="/home/yago/My_scripts/create_and_move.sh"
-alias split_on_folders="/home/yago/My_scripts/split_on_folders.sh "
-alias jflex_template="/home/yago/My_scripts/init_jflex_file.sh"
-
-
-alias compressAsIVYJava="tar -cvf IglesiasVazquezYago.tar --exclude='*.out' *"
 alias removeclass="rm -r *.class"
-alias music='function _(){ python3 /home/yago/My_scripts/reproductor.py ; }; _'
-alias ssh_up="ssh-add /home/yago/.ssh/id_ed25519_gaufre"
 
+# Personal
+source $HOME/dotfiles/My_scripts/.my_scripts_aliases

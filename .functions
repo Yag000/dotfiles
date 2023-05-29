@@ -1,51 +1,3 @@
-
-# Universite
-
-## Algorithmique
-
-go_algotp(){
-    go_s4 && cd EA4/l2_s4_EA4/TPs/TP$1
-}
-
-code_algotp(){
-    go_algotp $1 && code .
-}
-
-submit_algotp(){
-    go_algotp $1 &&  xdg-open . && firefox "https://moodle.u-paris.fr/course/view.php?id=1637"
-}
-
-
-## C programming
-
-go_ctp(){
-    go_s4 && cd C/l2_s4_C/TPs/TP$1
-}
-
-code_ctp(){
-    go_ctp $1 && code .
-}
-
-submit_ctp(){
-    go_ctp $1  && xdg-open . && firefox "https://moodle.u-paris.fr/course/view.php?id=1633"
-}
-
-compilec(){
-    gcc -Wall -o $1.out $1.c
-}
-
-compilerc(){
-    compilec "$1" && ./$1.out
-}
-
-
-## Jflex fo Automates
-
-jflexfast(){
-    jflex $1.jflex &&  javac Lexer.java && java Lexer $2
-}
-
-
 # OCaml
 
 dune_exec(){
@@ -59,7 +11,7 @@ initialize_day_repo_ocaml(){
 }
 
 
-# Quick git diff from https://medium.com/@GroundControl/better-git-diffs-with-fzf-89083739a9cb 
+# Quick git diff from: https://medium.com/@GroundControl/better-git-diffs-with-fzf-89083739a9cb 
 git_diff() {
   preview="git diff $@ --color=always -- {-1}"
   git diff $@ --name-only | fzf -m --ansi --preview $preview

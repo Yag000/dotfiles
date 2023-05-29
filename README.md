@@ -40,7 +40,7 @@ WIP
 
 ### zsh
 
-- [ ] Update aliases
+- [x] Update aliases
 
 ### tmux
 
