@@ -20,7 +20,7 @@ WIP
 - [x] Keybind for changing Wallpaper (won't be done)
 - [x] Keybind for changing keyboard layout (won't be done)
 - [ ] Keybind for monitor layout
-- [ ] Mute on startup
+- [x] Mute on startup
 - [ ] Mute after disconnecting Bluetooth
 - [x] Add i3block for keyboard layout (clickable)
 - [ ] Add clickable i3blocks

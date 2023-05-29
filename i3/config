@@ -252,3 +252,5 @@ exec_always setxkbmap eu
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id $HOME/dotfiles/bin/.local/scripts/wallpaper_updater
 
+# Mute audio on startup
+exec -no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1
