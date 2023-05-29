@@ -29,13 +29,14 @@ WIP
 
 ### Neovim
 
-- [ ] Solve issue with empty padding on the right
+- [ ] Solve issue with empty padding on the right and botton
 - [ ] Markdown preview
 - [ ] Markdown linting
 - [ ] Markdown formatting
 - [ ] Rename
-- [ ] git diff
-- [ ] Fast git commit and push/pull (keybinds)
+- [x] git diff (Good enough for now)
+- [x] Fast git commit and push/pull (keybinds)
+- [ ] Fast git push upstream (keybind)
 
 ### zsh
 
