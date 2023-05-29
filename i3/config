@@ -246,8 +246,8 @@ exec --no-startup-id i3-msg "workspace $ws2; exec i3-sensible-terminal"
 exec --no-startup-id discord
 
 
-# Set keyboard layout (temporary)
-exec setxkbmap eu     
+# Set keyboard layout this is important besause the i3bar assumes the keyboard layout to be eu when i3 is started
+exec_always setxkbmap eu     
 
 exec_always --no-startup-id picom -b
 exec_always --no-startup-id $HOME/dotfiles/bin/.local/scripts/wallpaper_updater

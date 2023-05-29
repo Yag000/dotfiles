@@ -17,14 +17,15 @@ WIP
 - [x] i3 Blocks (Battery, Volume, Date, Time, etc.)
 - [x] i3 Lock
 - [x] i3 Wallpaper on startup (it doesn't work with feh for some bizarre reason)
-- [ ] Keybind for changing Wallpaper
-- [ ] Keybind for changing keyboard layout
+- [x] Keybind for changing Wallpaper (won't be done)
+- [x] Keybind for changing keyboard layout (won't be done)
 - [ ] Keybind for monitor layout
 - [ ] Mute on startup
 - [ ] Mute after disconnecting Bluetooth
-- [ ] Add i3block for keyboard layout
+- [x] Add i3block for keyboard layout (clickable)
 - [ ] Add clickable i3blocks
 - [ ] Add colors to i3blocks
+- [ ] Add notification applet
 
 ### Neovim
 
