@@ -26,6 +26,7 @@ WIP
 - [ ] Add clickable i3blocks
 - [ ] Add colors to i3blocks
 - [ ] Add notification applet
+- [ ] Ntural scrolling
 
 ### Neovim
 
@@ -37,6 +38,7 @@ WIP
 - [x] git diff (Good enough for now)
 - [x] Fast git commit and push/pull (keybinds)
 - [ ] Fast git push upstream (keybind)
+- [ ] Spell checking
 
 ### zsh
 
@@ -45,4 +47,5 @@ WIP
 ### tmux
 
 - [x] Make tmux theme work
+- [ ] Shortcut for clearing the termnial
 - [ ] Improve tmux sessions (searching them)

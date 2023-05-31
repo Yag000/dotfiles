@@ -9,8 +9,9 @@ local sources = {
 	formatting.black,
 	formatting.ocamlformat,
 	formatting.stylua,
-    formatting.clang_format,
-    formatting.beautysh,
+	formatting.clang_format,
+	formatting.beautysh,
+	formatting.rustfmt,
 }
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
