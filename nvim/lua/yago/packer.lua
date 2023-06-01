@@ -140,10 +140,9 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+
 	use("ThePrimeagen/vim-be-good")
 	use("eandrju/cellular-automaton.nvim")
-
-	use("jose-elias-alvarez/null-ls.nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 

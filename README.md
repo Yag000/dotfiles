@@ -32,7 +32,7 @@ WIP
 ### Neovim
 
 - [ ] Solve issue with empty padding on the right and bottom
-- [ ] Markdown preview
+- [ ] Markdown preview (I doubt it)
 - [ ] Markdown linting
 - [ ] Markdown formatting
 - [ ] Rename

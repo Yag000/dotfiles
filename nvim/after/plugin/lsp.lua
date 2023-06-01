@@ -7,11 +7,11 @@ lsp.ensure_installed({
 	"pyright",
 	"jdtls",
 	"clangd",
+	"marksman",
 })
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
-
 
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
@@ -19,6 +19,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 	["<Tab>"] = cmp.mapping.confirm({ select = true }),
 	["<Enter>"] = cmp.mapping.confirm({ select = false }),
 })
+
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 lsp.setup_nvim_cmp({
 	mapping = cmp_mappings,
