@@ -1,8 +1,12 @@
 Testing/
+
 plugin/
 !after/plugin/
+
 mason/
 site/
+spell/
+
 rplugin.vim
 .netrwhist
 harpoon.json

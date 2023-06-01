@@ -1,4 +1,4 @@
-# dotfiles
+# Dotfiles
 
 My personal dotfiles
 
@@ -26,11 +26,12 @@ WIP
 - [ ] Add clickable i3blocks
 - [ ] Add colors to i3blocks
 - [ ] Add notification applet
-- [ ] Ntural scrolling
+- [x] Natural scrolling
+- [ ] Change date applet to show the date in different formats (clickable)
 
 ### Neovim
 
-- [ ] Solve issue with empty padding on the right and botton
+- [ ] Solve issue with empty padding on the right and bottom
 - [ ] Markdown preview
 - [ ] Markdown linting
 - [ ] Markdown formatting
@@ -38,7 +39,7 @@ WIP
 - [x] git diff (Good enough for now)
 - [x] Fast git commit and push/pull (keybinds)
 - [ ] Fast git push upstream (keybind)
-- [ ] Spell checking
+- [x] Spell checking
 
 ### zsh
 
@@ -47,5 +48,5 @@ WIP
 ### tmux
 
 - [x] Make tmux theme work
-- [ ] Shortcut for clearing the termnial
+- [ ] Shortcut for clearing the terminal
 - [ ] Improve tmux sessions (searching them)
