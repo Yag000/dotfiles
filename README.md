@@ -33,8 +33,8 @@ WIP
 
 - [ ] Solve issue with empty padding on the right and bottom
 - [ ] Markdown preview (I doubt it)
-- [ ] Markdown linting
-- [ ] Markdown formatting
+- [x] Markdown linting
+- [x] Markdown formatting
 - [ ] Rename
 - [x] git diff (Good enough for now)
 - [x] Fast git commit and push/pull (keybinds)
@@ -49,4 +49,4 @@ WIP
 
 - [x] Make tmux theme work
 - [ ] Shortcut for clearing the terminal
-- [ ] Improve tmux sessions (searching them)
+- [x] Improve tmux sessions (searching them)
