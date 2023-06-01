@@ -38,7 +38,7 @@ WIP
 - [ ] Rename
 - [x] git diff (Good enough for now)
 - [x] Fast git commit and push/pull (keybinds)
-- [ ] Fast git push upstream (keybind)
+- [x] Fast git push upstream (keybind)
 - [x] Spell checking
 
 ### zsh
