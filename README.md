@@ -28,6 +28,8 @@ WIP
 - [ ] Add notification applet
 - [x] Natural scrolling
 - [ ] Change date applet to show the date in different formats (clickable)
+- [ ] Improve i3lock-fancy (or change it to another one)
+- [ ] Add shutdown shortcut 
 
 ### Neovim
 
@@ -44,7 +46,7 @@ WIP
 ### zsh
 
 - [x] Update aliases
-
+- [ ] Update go aliases
 ### tmux
 
 - [x] Make tmux theme work

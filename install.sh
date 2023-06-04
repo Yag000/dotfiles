@@ -1,5 +1,7 @@
 POS=$HOME/dotfiles
 
+# Create copies of the old configuration files before installation
+
 ln -s $POS/.aliases $HOME/.aliases
 ln -s $POS/.functions $HOME/.functions
 ln -s $POS/.bashrc $HOME/.bashrc

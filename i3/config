@@ -254,5 +254,8 @@ exec_always --no-startup-id $HOME/dotfiles/bin/.local/scripts/wallpaper_updater
 # Natural scrolling for my touchpad
 exec --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "libinput Natural Scrolling Enabled" 1
 
+# Remove CL key from keyboard (I HATE IT)
+exec --no-startup-id  setxkbmap -option caps:none
+
 # Mute audio on startup
 exec -no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1

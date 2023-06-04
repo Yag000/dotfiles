@@ -128,6 +128,7 @@ return require("packer").startup(function(use)
 				},
 				filetypes = {
 					yaml = true,
+                    rs=false, -- For learning rust
 					markdown = true,
 					help = false,
 					gitcommit = true,
