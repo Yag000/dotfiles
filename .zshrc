@@ -90,7 +90,6 @@ plugins=(
     zsh-history-substring-search
     z 
     zsh-syntax-highlighting
-    zsh-autosuggestions
     zsh-autocomplete
     you-should-use
     colored-man-pages
