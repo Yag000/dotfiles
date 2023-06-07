@@ -30,6 +30,8 @@ WIP
 - [ ] Change date applet to show the date in different formats (clickable)
 - [ ] Improve i3lock-fancy (or change it to another one)
 - [ ] Add shutdown shortcut 
+- [ ] Improve keyboard block
+- [ ] Improve monitor setup
 
 ### Neovim
 
