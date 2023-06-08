@@ -253,13 +253,20 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
+# Do not display windows title
+default_border pixel 1
+default_floating_border pixel 1
+
 # gaps
 # Inner gaps for all windows: space between two adjacent windows (or split containers).
+
 gaps inner 10px
 
 
 # Outer gaps for all windows: space along the screen edges.
-gaps outer 3px
+gaps left 3px
+gaps right 3px
+gaps bottom 3px
 
 # inverse_outer only enables outer gaps when there is exactly one
 # window or split container on the workspace.
@@ -318,7 +325,7 @@ exec_always setxkbmap eu
 # For this to work you need to install autotiling  (https://github.com/nwg-piotr/autotiling)
 exec_always --no-startup-id autotiling 
 
-exec_always --no-startup-id picom -b
+exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 exec_always --no-startup-id $HOME/dotfiles/bin/.local/scripts/wallpaper_updater
 
 # Natural scrolling for my touchpad
