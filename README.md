@@ -23,15 +23,19 @@ WIP
 - [x] Mute on startup
 - [ ] Mute after disconnecting Bluetooth
 - [x] Add i3block for keyboard layout (clickable)
-- [ ] Add clickable i3blocks
-- [ ] Add colors to i3blocks
+- [x] Add clickable i3blocks (change to polybar)
+- [x] Add colors to i3blocks (change to polybar)
 - [ ] Add notification applet
 - [x] Natural scrolling
-- [ ] Change date applet to show the date in different formats (clickable)
+- [x] Change date applet to show the date in different formats (clickable)
 - [ ] Improve i3lock-fancy (or change it to another one)
-- [ ] Add shutdown shortcut 
+- [x] Add shutdown shortcut
 - [ ] Improve keyboard block
-- [ ] Improve monitor setup
+- [x] Improve monitor setup
+- [x] Use i3gaps
+- [ ] Improve i3gaps config
+- [ ] Split config file
+- [ ] Improve polybar config
 
 ### Neovim
 
@@ -49,6 +53,7 @@ WIP
 
 - [x] Update aliases
 - [ ] Update go aliases
+
 ### tmux
 
 - [x] Make tmux theme work
