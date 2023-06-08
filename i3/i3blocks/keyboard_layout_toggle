@@ -23,6 +23,7 @@ else
 fi
 
 setxkbmap $new_layout
+setxkbmap -option caps:none # Disable caps lock
 notify-send "Keyboard layout changed to $new_layout"
 echo "$new_layout"
 
