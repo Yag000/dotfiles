@@ -34,8 +34,11 @@ WIP
 - [x] Improve monitor setup
 - [x] Use i3gaps
 - [ ] Improve i3gaps config
-- [ ] Split config file
+- [ ] Split config file (probably not)
 - [ ] Improve polybar config
+- [ ] Center polybar selected window
+- [ ] Polybar on second monitor
+- [ ] Improve polybar colors
 
 ### Neovim
 
@@ -48,6 +51,7 @@ WIP
 - [x] Fast git commit and push/pull (keybinds)
 - [x] Fast git push upstream (keybind)
 - [x] Spell checking
+- [ ] Lean support 
 
 ### zsh
 
