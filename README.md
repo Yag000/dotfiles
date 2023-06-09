@@ -39,7 +39,8 @@ WIP
 - [ ] Center polybar selected window
 - [ ] Polybar on second monitor
 - [ ] Improve polybar colors
-- [ ] solve issue with default terminal in ws2
+- [ ] Solve issue with default terminal in ws2
+
 ### Neovim
 
 - [ ] Solve issue with empty padding on the right and bottom
@@ -51,7 +52,7 @@ WIP
 - [x] Fast git commit and push/pull (keybinds)
 - [x] Fast git push upstream (keybind)
 - [x] Spell checking
-- [ ] Lean support 
+- [x] Lean support
 
 ### zsh
 
