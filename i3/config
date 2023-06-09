@@ -314,13 +314,13 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 
 
 # Start applications
+exec --no-startup-id i3-msg "workspace 2; exec i3-sensible-terminal"
 exec --no-startup-id firefox
-exec --no-startup-id i3-msg "workspace $ws2; exec i3-sensible-terminal"
 exec --no-startup-id discord
 
 
 # Set keyboard layout this is important besause the i3bar assumes the keyboard layout to be eu when i3 is started
-exec_always setxkbmap eu     
+exec_always "$HOME/dotfiles/bin/.local/scripts/keyboard_layout_toggle eu"
 
 # For this to work you need to install autotiling  (https://github.com/nwg-piotr/autotiling)
 exec_always --no-startup-id autotiling 
@@ -331,8 +331,7 @@ exec_always --no-startup-id $HOME/dotfiles/bin/.local/scripts/wallpaper_updater
 # Natural scrolling for my touchpad
 exec --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "libinput Natural Scrolling Enabled" 1
 
-# Remove CL key from keyboard (I HATE IT)
-exec_always --no-startup-id  setxkbmap -option caps:none
 
 # Mute audio on startup
 exec -no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1
+

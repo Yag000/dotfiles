@@ -21,6 +21,7 @@ WIP
 - [x] Keybind for changing keyboard layout (won't be done)
 - [ ] Keybind for monitor layout
 - [x] Mute on startup
+exec --no-startup-id 
 - [ ] Mute after disconnecting Bluetooth
 - [x] Add i3block for keyboard layout (clickable)
 - [x] Add clickable i3blocks (change to polybar)
@@ -38,8 +39,8 @@ WIP
 - [ ] Improve polybar config
 - [ ] Center polybar selected window
 - [ ] Polybar on second monitor
-- [ ] Improve polybar colors
 - [ ] Solve issue with default terminal in ws2
+- [x] Solve issue with default terminal in ws2
 
 ### Neovim
 

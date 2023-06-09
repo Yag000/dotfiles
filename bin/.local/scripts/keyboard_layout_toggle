@@ -5,25 +5,38 @@
 # Get the current keyboard layout
 current_layout=$(setxkbmap -query | grep layout | awk '{print $2}')
 
+
 if [ $# -ne 0 ]; then
-    if [ $1 = "-query" ]; then
-        echo $current_layout
+    if [ $# = 1 ]; then
+        if [ "$1" = "-query" ]; then
+        echo "$current_layout"
         exit 0
+    else
+        new_layout=$1
     fi
+else
     echo "Usage: $0"
     exit 1
+    fi
+else 
+    new_layout=""
 fi
+
 
 # Change the keyboard layout
 
-if [ $current_layout = "es" ]; then
+if [ "$new_layout" = "" ]; then
+if [ "$current_layout" = "es" ]; then
     new_layout="eu"
 else
     new_layout="es"
 fi
+fi
 
-setxkbmap $new_layout
-setxkbmap -option caps:none # Disable caps lock
+setxkbmap "$new_layout"
+"$HOME/dotfiles/bin/.local/scripts/unlock_caps" # Disable caps lock
+setxkbmap -option caps:none # Disable caps lock key
+
 notify-send "Keyboard layout changed to $new_layout"
 echo "$new_layout"
 

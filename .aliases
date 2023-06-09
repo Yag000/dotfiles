@@ -32,7 +32,6 @@ alias go_herubot="go_projects && cd herubot"
 
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}'"
 
-alias python=python3
 alias py=python3
 
 alias vscode="code"
