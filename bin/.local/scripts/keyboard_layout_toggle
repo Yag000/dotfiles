@@ -1,0 +1,30 @@
+#!/usr/bin/bash
+
+# This script is used to quickly change the keyboard layout between es and eu
+
+# Get the current keyboard layout
+current_layout=$(setxkbmap -query | grep layout | awk '{print $2}')
+
+if [ $# -ne 0 ]; then
+    if [ $1 = "-query" ]; then
+        echo $current_layout
+        exit 0
+    fi
+    echo "Usage: $0"
+    exit 1
+fi
+
+# Change the keyboard layout
+
+if [ $current_layout = "es" ]; then
+    new_layout="eu"
+else
+    new_layout="es"
+fi
+
+setxkbmap $new_layout
+setxkbmap -option caps:none # Disable caps lock
+notify-send "Keyboard layout changed to $new_layout"
+echo "$new_layout"
+
+exit 0
