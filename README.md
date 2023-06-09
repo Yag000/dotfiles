@@ -39,7 +39,7 @@ WIP
 - [ ] Center polybar selected window
 - [ ] Polybar on second monitor
 - [ ] Improve polybar colors
-
+- [ ] solve issue with default terminal in ws2
 ### Neovim
 
 - [ ] Solve issue with empty padding on the right and bottom

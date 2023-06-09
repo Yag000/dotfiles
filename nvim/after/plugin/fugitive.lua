@@ -12,4 +12,12 @@ vim.keymap.set("n", "<leader>gl", function()
 	vim.cmd.Git("pull")
 end)
 
+vim.keymap.set("n", "<leader>gb", function()
+	vim.cmd.Git("diff")
+end)
+
+vim.keymap.set("n", "<leader>gd", function()
+	vim.cmd.Gdiffsplit()
+end)
+
 vim.keymap.set("n", "<leader>go", ":Git push -u origin ", opts)
