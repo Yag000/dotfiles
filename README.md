@@ -14,7 +14,7 @@ My personal dotfiles
 - **OhMyZsh**: https://github.com/ohmyzsh/ohmyzsh
 - **Neovim**: https://neovim.io/
 - **i3-lock-fancy** https://github.com/meskarune/i3lock-fancy
-- Many other that I have no yet listed (sorry :( )
+- Many others that I have no yet listed (sorry :( )
 
 ## Installation
 
