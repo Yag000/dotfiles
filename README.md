@@ -39,6 +39,9 @@ WIP
 - [x] Center polybar selected window
 - [x] Polybar on second monitor
 - [x] Solve issue with default terminal in ws2
+- [ ] Mute on lock
+- [ ] Stop playing on lock
+
 
 ### Neovim
 
