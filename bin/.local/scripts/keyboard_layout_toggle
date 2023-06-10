@@ -9,16 +9,16 @@ current_layout=$(setxkbmap -query | grep layout | awk '{print $2}')
 if [ $# -ne 0 ]; then
     if [ $# = 1 ]; then
         if [ "$1" = "-query" ]; then
-        echo "$current_layout"
-        exit 0
+            echo "$current_layout"
+            exit 0
+        else
+            new_layout=$1
+        fi
     else
-        new_layout=$1
+        echo "Usage: $0"
+        exit 1
     fi
 else
-    echo "Usage: $0"
-    exit 1
-    fi
-else 
     new_layout=""
 fi
 
@@ -26,11 +26,11 @@ fi
 # Change the keyboard layout
 
 if [ "$new_layout" = "" ]; then
-if [ "$current_layout" = "es" ]; then
-    new_layout="eu"
-else
-    new_layout="es"
-fi
+    if [ "$current_layout" = "es" ]; then
+        new_layout="eu"
+    else
+        new_layout="es"
+    fi
 fi
 
 setxkbmap "$new_layout"

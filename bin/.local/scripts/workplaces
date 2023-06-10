@@ -9,4 +9,3 @@ else
     find ~/Documents/l2_math-info/s4 ~/Projects -maxdepth 3 -name .git -exec dirname {} \; -prune > $workplaces_dir
     cat $workplaces_dir
 fi
-
