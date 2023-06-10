@@ -19,9 +19,8 @@ WIP
 - [x] i3 Wallpaper on startup (it doesn't work with feh for some bizarre reason)
 - [x] Keybind for changing Wallpaper (won't be done)
 - [x] Keybind for changing keyboard layout (won't be done)
-- [ ] Keybind for monitor layout
+- [x] Keybind for monitor layout (not needed)
 - [x] Mute on startup
-exec --no-startup-id 
 - [ ] Mute after disconnecting Bluetooth
 - [x] Add i3block for keyboard layout (clickable)
 - [x] Add clickable i3blocks (change to polybar)
@@ -31,15 +30,14 @@ exec --no-startup-id
 - [x] Change date applet to show the date in different formats (clickable)
 - [ ] Improve i3lock-fancy (or change it to another one)
 - [x] Add shutdown shortcut
-- [ ] Improve keyboard block
+- [x] Improve keyboard block
 - [x] Improve monitor setup
 - [x] Use i3gaps
-- [ ] Improve i3gaps config
-- [ ] Split config file (probably not)
+- [x] Improve i3gaps config
+- [ ] Split i3 config file (probably not)
 - [ ] Improve polybar config
-- [ ] Center polybar selected window
-- [ ] Polybar on second monitor
-- [ ] Solve issue with default terminal in ws2
+- [x] Center polybar selected window
+- [x] Polybar on second monitor
 - [x] Solve issue with default terminal in ws2
 
 ### Neovim
