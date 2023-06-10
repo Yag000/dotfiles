@@ -2,7 +2,7 @@
 
 My personal dotfiles
 
-## Installation
+# Installation
 
 WIP
 
