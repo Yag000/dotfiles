@@ -6,7 +6,7 @@
 
 ## i3
 
-- [ ] Mute after disconnecting Bluetooth
+- [ ] Improve i3 and polybar interaction
 - [ ] Add notification applet
 - [ ] Improve i3lock-fancy (or change it to another one)
 - [ ] Split i3 config file (probably not)
@@ -18,7 +18,6 @@
 
 - [ ] Solve issue with empty padding on the right and bottom
 - [ ] Markdown preview (I doubt it)
-- [ ] Rename
 
 ## zsh
 
@@ -29,6 +28,8 @@
 - [ ] Shortcut for clearing the terminal
 
 ## Already done
+
+### i3
 
 - [x] Natural scrolling
 - [x] Change date applet to show the date in different formats (clickable)
@@ -42,6 +43,8 @@
 - [x] Keybind for changing keyboard layout (won't be done)
 - [x] Keybind for monitor layout (not needed)
 - [x] Mute on startup
+- [x] Mute after disconnecting Bluetooth
+- [x] Improve date polybar
 
 ### Neovim
 
@@ -52,6 +55,7 @@
 - [x] Lean support
 - [x] Markdown linting
 - [x] Markdown formatting
+- [x] Rename
 
 ### zsh
 
