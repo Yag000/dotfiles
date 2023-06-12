@@ -5,28 +5,7 @@
 # Go to directory
 ## University
 
-alias go_s4="cd /home/yago/Documents/l2_math-info/s4"
-alias go_langagec="go_s4 && cd C"
-alias go_EA4="go_s4 && cd EA4"
-alias go_PI4="go_s4 && cd PI4"
-alias go_PP4="go_s4 && cd PP4"
-alias go_AlphaGo="go_PP4 && cd GYT-Pre-pro_math"
-alias go_c-project="go_langagec && cd l2_s4_c-project"
-
-alias go_gytmy="go_PI4 && cd 2022-sb1-ga-gytmy"
-alias go_rapport_gytmy="go_PI4 && cd rapport-gytmy"
-alias testgytmy="go_gytmy && ./run.sh test"
-alias rungytmy="go_gytmy && ./run.sh"
-
 ## Personal
-
-alias go_AoC="cd /home/yago/Documents/Archivos/Programas/AOC/Advent_of_code_2022"
-alias go_projects="cd /home/yago/Documents/Archivos/Programas/projects"
-alias go_elvish="cd /home/yago/Documents/Archivos/Elvish"
-alias go_scripts="cd /home/yago/My_scripts"
-alias go_secret_hermes="go_projects && cd Secret-Hermes"
-alias go_herubot="go_projects && cd herubot"
-
 
 # Fast access to programs
 

@@ -1,5 +1,4 @@
 # OCaml
-
 dune_exec(){
     eval $(opam env) && dune build bin/main.exe && dune exec bin/main.exe
 }

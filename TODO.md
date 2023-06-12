@@ -21,8 +21,6 @@
 
 ## zsh
 
-- [ ] Update go aliases
-
 ## tmux
 
 - [ ] Shortcut for clearing the terminal
@@ -59,6 +57,7 @@
 
 ### zsh
 
+- [x] Update go aliases
 - [x] Update aliases
 
 ### tmux
