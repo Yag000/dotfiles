@@ -34,7 +34,7 @@ if [ "$new_layout" = "" ]; then
 fi
 
 setxkbmap "$new_layout"
-"$HOME/dotfiles/bin/.local/scripts/unlock_caps" # Disable caps lock
+"$HOME/dotfiles/bin/unlock_caps" # Disable caps lock
 setxkbmap -option caps:none # Disable caps lock key
 
 notify-send "Keyboard layout changed to $new_layout"
