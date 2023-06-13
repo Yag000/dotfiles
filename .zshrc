@@ -103,7 +103,7 @@ source ~/.aliases
 source ~/.functions
 source ~/.zsh_profile
 
-export PATH="$HOME/dotfiles/bin/.local/scripts/:$HOME/.local/bin:$HOME/.elan/bin:$PATH"
+export PATH="$HOME/dotfiles/bin/:$HOME/.local/bin:$HOME/.elan/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
