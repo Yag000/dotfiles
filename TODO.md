@@ -6,9 +6,7 @@
 
 ## i3
 
-- [ ] Improve i3 and polybar interaction
 - [ ] Add notification applet
-- [ ] Improve i3lock-fancy (or change it to another one)
 - [ ] Split i3 config file (probably not)
 - [ ] Improve polybar config
 - [ ] Mute on lock
@@ -25,6 +23,7 @@
 ## tmux
 
 - [ ] Shortcut for clearing the terminal
+- [ ] Solve issue with empty padding on the bottom
 
 ## Already done
 
@@ -44,6 +43,8 @@
 - [x] Mute on startup
 - [x] Mute after disconnecting Bluetooth
 - [x] Improve date polybar
+- [x] Improve i3 and polybar interaction
+- [x] Improve i3lock-fancy (or change it to another one) (change to polybar)
 
 ### Neovim
 
