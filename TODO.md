@@ -13,6 +13,7 @@
 - [ ] Improve polybar config
 - [ ] Mute on lock
 - [ ] Stop playing on lock
+- [ ] Change menu colors (app runner and power menu) to match catppuccin theme.
 
 ## Neovim
 

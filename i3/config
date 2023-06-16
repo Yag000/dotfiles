@@ -265,7 +265,7 @@ gaps inner 10px
 
 # Outer gaps for all windows: space along the screen edges.
 # 24 + 2 = 26
-gaps top 26px 
+gaps top 0px 
 gaps left 3px
 gaps right 3px
 gaps bottom 3px
@@ -299,7 +299,7 @@ bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-5/launcher
 
 # Lock
 bindsym $mod+shift+x exec $HOME/dotfiles/bin/power-menu.sh
-exec --no-startup-id $HOME/.config/i3/locker
+exec --no-startup-id $HOME/.config/i3/locker 20
 
 
 ## Screenshots
