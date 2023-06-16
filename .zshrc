@@ -136,3 +136,6 @@ export PATH="$HOME/dotfiles/bin/:$HOME/.local/bin:$HOME/.elan/bin:$PATH"
 # opam configuration
 [[ ! -r /home/yago/.opam/opam-init/init.zsh ]] || source /home/yago/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+
+eval "$(zoxide init zsh)" # Initialize `zoxide` for tmux-sessionizer
