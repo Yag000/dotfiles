@@ -30,11 +30,11 @@ HISTFILESIZE=
 HISTTIMEFORMAT="%Y-%m-%d %H:%M.%S | "
 
 shopt -s histappend cmdhist lithist histreedit histverify globstar direxpand \
-  cdspell checkwinsize dotglob extglob
+    cdspell checkwinsize dotglob extglob
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-   xterm-color) color_prompt=yes;;
+    xterm-color) color_prompt=yes ;;
 esac
 
 # Uncomment for a colored prompt, if the terminal has the capability; turned
@@ -44,39 +44,39 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
 term_colors() {
-  local BLACK="\[\033[0;30m\]"
-  local BLUE="\[\033[0;34m\]"
-  local GREEN="\[\033[0;32m\]"
-  local CYAN="\[\033[0;36m\]"
-  local RED="\[\033[0;31m\]"
-  local PURPLE="\[\033[0;35m\]"
-  local BROWN="\[\033[0;33m\]"
-  local LIGHT_GRAY="\[\033[0;37m\]"
-  local DARK_GRAY="\[\033[1;30m\]"
-  local LIGHT_BLUE="\[\033[1;34m\]"
-  local LIGHT_GREEN="\[\033[1;32m\]"
-  local LIGHT_CYAN="\[\033[1;36m\]"
-  local LIGHT_RED="\[\033[1;31m\]"
-  local LIGHT_PURPLE="\[\033[1;35m\]"
-  local YELLOW="\[\033[1;33m\]"
-  local WHITE="\[\033[1;37m\]"
-  local NO_COLOR="\[\033[0m\]"
-  PS1="${debian_chroot:+($debian_chroot)}$LIGHT_GREEN\u@\h$NO_COLOR:$LIGHT_BLUE\w $RED\${prompt_job}$NO_COLOR\$"
-  PS1="$LIGHT_GREEN\u@\h$NO_COLOR:$LIGHT_BLUE\w $RED\${prompt_job}$NO_COLOR\$"
+    local BLACK="\[\033[0;30m\]"
+    local BLUE="\[\033[0;34m\]"
+    local GREEN="\[\033[0;32m\]"
+    local CYAN="\[\033[0;36m\]"
+    local RED="\[\033[0;31m\]"
+    local PURPLE="\[\033[0;35m\]"
+    local BROWN="\[\033[0;33m\]"
+    local LIGHT_GRAY="\[\033[0;37m\]"
+    local DARK_GRAY="\[\033[1;30m\]"
+    local LIGHT_BLUE="\[\033[1;34m\]"
+    local LIGHT_GREEN="\[\033[1;32m\]"
+    local LIGHT_CYAN="\[\033[1;36m\]"
+    local LIGHT_RED="\[\033[1;31m\]"
+    local LIGHT_PURPLE="\[\033[1;35m\]"
+    local YELLOW="\[\033[1;33m\]"
+    local WHITE="\[\033[1;37m\]"
+    local NO_COLOR="\[\033[0m\]"
+    PS1="${debian_chroot:+($debian_chroot)}$LIGHT_GREEN\u@\h$NO_COLOR:$LIGHT_BLUE\w $RED\${prompt_job}$NO_COLOR\$"
+    PS1="$LIGHT_GREEN\u@\h$NO_COLOR:$LIGHT_BLUE\w $RED\${prompt_job}$NO_COLOR\$"
 }
 
 if [ "$color_prompt" = yes ]; then
-  term_colors
+    term_colors
 else
     PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w\ \${prompt_job}\$ "
 fi
@@ -84,9 +84,9 @@ unset color_prompt force_color_prompt
 
 # Set LS_COLORS envvar for use with `ls --color`
 for dircolor_path in /usr/bin/dircolors /usr/local/opt/coreutils/libexec/gnubin/dircolors; do
-  if [ -x $dircolor_path ]; then
-      test -r ~/.dircolors && eval "$($dircolor_path -b ~/.dircolors)" || eval "$($dircolor_path -b)"
-  fi
+    if [ -x $dircolor_path ]; then
+        test -r ~/.dircolors && eval "$($dircolor_path -b ~/.dircolors)" || eval "$($dircolor_path -b)"
+    fi
 done
 
 # Fix adding quotes around names with spaces
@@ -98,3 +98,5 @@ export QUOTING_STYLE=literal
 [[ -f "$HOME/.functions" ]] && source "$HOME/.functions"
 
 . "$HOME/.cargo/env"
+
+eval "$(zoxide init bash)"

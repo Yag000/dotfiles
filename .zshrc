@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -79,16 +79,16 @@ XDG_CONFIG_HOME="$HOME/.config"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-# This must be done before the oh-my-zsh.sh is sourced 
+# This must be done before the oh-my-zsh.sh is sourced
 # (in particular before the loading of the zsh-syntax-highlighting plugin)
 source ~/.zsh/catppuccin_frappe-zsh-syntax-highlighting.zsh
 
 plugins=(
     git
-    zsh-autosuggestions 
-    copyfile 
+    zsh-autosuggestions
+    copyfile
     zsh-history-substring-search
-    z 
+    z
     zsh-syntax-highlighting
     zsh-autocomplete
     you-should-use
@@ -137,5 +137,3 @@ export PATH="$HOME/dotfiles/bin/:$HOME/.local/bin:$HOME/.elan/bin:$PATH"
 [[ ! -r /home/yago/.opam/opam-init/init.zsh ]] || source /home/yago/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
-
-eval "$(zoxide init zsh)" # Initialize `zoxide` for tmux-sessionizer

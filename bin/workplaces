@@ -8,4 +8,5 @@ if [[ $# -eq 1 ]]; then
 else
     find ~/Documents/l2_math-info/s4 ~/Projects -maxdepth 3 -name .git -exec dirname {} \; -prune > $workplaces_dir
     cat $workplaces_dir
+    echo "$HOME/dotfiles"
 fi
