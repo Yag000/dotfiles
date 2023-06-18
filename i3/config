@@ -295,7 +295,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # dmenu alternative: rofi, using an assortment of launchers from: https://github.com/adi1090x/rofi
-bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-5/launcher.sh
+bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-2/launcher.sh
 
 # Lock
 bindsym $mod+shift+x exec $HOME/dotfiles/bin/power-menu.sh

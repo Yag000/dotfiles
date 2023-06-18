@@ -8,8 +8,6 @@
 
 - [ ] Add notification applet
 - [ ] Split i3 config file (probably not)
-- [ ] Improve polybar config
-- [ ] Change menu colors (app runner and power menu) to match catppuccin theme.
 
 ## Neovim
 
@@ -49,6 +47,8 @@
 - [x] Improve i3lock-fancy (or change it to another one) (change to polybar)
 - [x] Mute on lock
 - [x] Stop playing on lock
+- [x] Improve polybar config
+- [x] Change menu colors (app runner and power menu) to match catppuccin theme.
 
 ### Neovim
 
