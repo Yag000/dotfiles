@@ -7,3 +7,5 @@ pactl set-sink-mute @DEFAULT_SINK@ 1
 playerctl pause
 
 i3lock-fancy -gp -- maim
+
+$HOME/dotfiles/bin/keyboard_layout_toggle "eu"

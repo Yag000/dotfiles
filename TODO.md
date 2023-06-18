@@ -23,6 +23,10 @@
 - [ ] Shortcut for clearing the terminal
 - [ ] Solve issue with empty padding on the bottom
 
+## Other
+
+- [ ] Create a way to have a session default keyboard layout
+
 ## Already done
 
 ### i3
