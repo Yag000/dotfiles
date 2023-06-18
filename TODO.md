@@ -20,7 +20,6 @@
 
 ## tmux
 
-- [ ] Improve tmux-sessionizer speed 
 - [ ] Shortcut for clearing the terminal
 - [ ] Solve issue with empty padding on the bottom
 
@@ -67,3 +66,4 @@
 
 - [x] Make tmux theme work
 - [x] Improve tmux sessions (searching them)
+- [x] Improve tmux-sessionizer speed

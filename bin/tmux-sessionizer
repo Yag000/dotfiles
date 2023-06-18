@@ -12,7 +12,7 @@ else
         while read -r line; do
             zoxide_query=$(zoxide query -l -s "$line")
             [[ -z $zoxide_query ]] && echo "0 $line" && continue
-            python3 $HOME/dotfiles/bin/splitter.py "$(echo $zoxide_query)"
+            echo "$zoxide_query"
             # zoxide query -l -s "$line/"
         done |
         sort -rnk1 |
