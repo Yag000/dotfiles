@@ -8,11 +8,14 @@
 
 - [ ] Add notification applet
 - [ ] Split i3 config file (probably not)
+- [ ] Betterlockscreen
+- [ ] Changing wallpaper every X minutes
 
 ## Neovim
 
 - [ ] Solve issue with empty padding on the right and bottom
 - [ ] Markdown preview (I doubt it)
+- [ ] clippy for rust
 
 ## zsh
 
@@ -24,7 +27,9 @@
 ## Other
 
 - [ ] Create a way to have a session default keyboard layout
-
+- [ ] Calendar
+- [ ] Change terminal zoom depending on the monitor
+- [ ] Suspend does not work due to the 30s delay of locking...
 ## Already done
 
 ### i3

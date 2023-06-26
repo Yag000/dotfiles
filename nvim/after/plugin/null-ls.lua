@@ -13,6 +13,7 @@ local sources = {
     -- formatting.clang_format,
     formatting.beautysh,
     formatting.markdownlint,
+    formatting.prettierd,
 }
 
 

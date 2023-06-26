@@ -1,4 +1,56 @@
 #!/usr/bin/bash
+
 FILES=($HOME/Pictures/Wallpapers/*)
-WALLPAPER=${FILES[$RANDOM % ${#FILES[@]}]}
-feh --bg-scale $WALLPAPER
+sleep_time=$((30*60)) #30 minutes
+
+
+update_wallpaper() {
+    WALLPAPER=${FILES[$RANDOM % ${#FILES[@]}]}
+    feh --bg-scale $WALLPAPER
+}
+
+if [ $# -gt 0 ]; then
+    case $1 in
+        -t|--toggle)
+            update_wallpaper
+            exit 0
+            ;;
+        -s |--sleep)
+            sleep_time=$2
+            ;;
+        -m|--minutes)
+            sleep_time=$(($2 * 60))
+            ;;
+        -h |--help)
+            echo "Usage: wallpaper_updater [OPTION]"
+            echo "  -t, --toggle    update wallpaper once"
+            echo "  -s, --sleep     set sleep time in seconds, default is 1800 (30 minutes))"
+            echo "  -m  --minutes  set sleep time in minutes, default is 30 minutes"
+            echo "  -h, --help      display this help and exit"
+            exit 0
+            ;;
+        *)
+            ;;
+    esac
+
+fi
+
+# Get the current process ID of the script
+current_pid=$$
+
+# Find all previous instances of the script and kill them
+previous_pids=$(pgrep -f "$(basename "$0")")
+
+# Exclude the current process ID from the list of previous PIDs
+previous_pids=$(echo "$previous_pids" | grep -vw "$current_pid")
+
+# Kill the previous instances of the script
+if [ -n "$previous_pids" ]; then
+    echo "Killing previous instances: $previous_pids"
+    kill $previous_pids
+fi
+
+while true; do
+    update_wallpaper
+    sleep $sleep_time
+done

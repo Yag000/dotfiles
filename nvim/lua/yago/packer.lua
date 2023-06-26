@@ -147,7 +147,7 @@ return require("packer").startup(function(use)
 
     use("jose-elias-alvarez/null-ls.nvim") -- Useful for formatting
 
-    use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+    use("christoomey/vim-tmux-navigator")  -- tmux & split window navigation
 
     -- auto closing
     use("windwp/nvim-autopairs")                                 -- autoclose parens, brackets, quotes, etc...
