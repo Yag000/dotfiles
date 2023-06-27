@@ -1,12 +1,16 @@
 #!/usr/bin/bash
 
-FILES=($HOME/Pictures/Wallpapers/*)
 sleep_time=$((30*60)) #30 minutes
 
+get_wallpater(){
+    WALLPAPER=$(find $HOME/Pictures/Wallpapers/ -type f | shuf -n 1)
+    echo $WALLPAPER
+}
 
 update_wallpaper() {
-    WALLPAPER=${FILES[$RANDOM % ${#FILES[@]}]}
+    WALLPAPER=$(get_wallpater)
     feh --bg-scale $WALLPAPER
+    betterlockscreen -u $WALLPAPER --desc "You better know the password :)" --fx
 }
 
 if [ $# -gt 0 ]; then
@@ -20,6 +24,10 @@ if [ $# -gt 0 ]; then
             ;;
         -m|--minutes)
             sleep_time=$(($2 * 60))
+            ;;
+        -g | --get)
+            get_wallpater
+            exit 0
             ;;
         -h |--help)
             echo "Usage: wallpaper_updater [OPTION]"

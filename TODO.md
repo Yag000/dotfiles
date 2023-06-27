@@ -30,6 +30,8 @@
 - [ ] Calendar
 - [ ] Change terminal zoom depending on the monitor
 - [ ] Suspend does not work due to the 30s delay of locking...
+- [ ] Improve wallpapers (for example simulate a pacman game etc...)
+
 ## Already done
 
 ### i3

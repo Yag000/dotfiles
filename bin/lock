@@ -6,4 +6,4 @@ pactl set-sink-mute @DEFAULT_SINK@ 1
 # Stop music
 playerctl pause
 
-i3lock-fancy -gp -- maim
+betterlockscreen -l

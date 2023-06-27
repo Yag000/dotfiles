@@ -1,7 +1,6 @@
-
 require("catppuccin").setup({
     flavour = "frappe", -- latte, frappe, macchiato, mocha
-    background = { -- :h background
+    background = {      -- :h background
         light = "latte",
         dark = "frappe",
     },
@@ -13,8 +12,8 @@ require("catppuccin").setup({
         shade = "dark",
         percentage = 0.15,
     },
-    no_italic = false, -- Force no italic
-    no_bold = false, -- Force no bold
+    no_italic = false,    -- Force no italic
+    no_bold = false,      -- Force no bold
     no_underline = false, -- Force no underline
     styles = {
         comments = { "italic" },
@@ -43,11 +42,12 @@ require("catppuccin").setup({
     },
 })
 
-function ColorMyPencils(color) 
-	color = color or "catppuccin"
-	vim.cmd.colorscheme(color)
+function ColorMyPencils(color)
+    color = color or "catppuccin"
+    vim.cmd.colorscheme(color)
 
-
+    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-ColorMyPencils()
+    ColorMyPencils()

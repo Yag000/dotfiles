@@ -294,8 +294,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-2/launcher.sh
 
 # Lock
-bindsym $mod+shift+x exec $HOME/dotfiles/bin/power-menu.sh
-exec --no-startup-id $HOME/.config/i3/locker 20
+bindsym $mod+shift+x exec $HOME/dotfiles/bin/power-menu
+exec --no-startup-id $HOME/bin/locker 20
 
 
 ## Screenshots
