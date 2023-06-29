@@ -23,7 +23,7 @@
     ### Geometry ###
     
     # Still using an older version of dunst? There is a new geometry format
-    geometry = "300x5-10+10"
+    geometry = "250x1-10+10"
 
 
     # Scale factor. It is auto-detected if value is 0.
@@ -206,10 +206,10 @@
     min_icon_size = 32
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 128
+    max_icon_size = 32
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /usr/share/icons/breeze-dark/16x16/status/:/usr/share/icons/breeze-dark/16x16/devices/
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/breeze-dark/16x16/devices/
 
     ### History ###
 

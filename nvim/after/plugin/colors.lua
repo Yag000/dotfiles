@@ -4,7 +4,7 @@ require("catppuccin").setup({
         light = "latte",
         dark = "frappe",
     },
-    transparent_background = false,
+    transparent_background = true,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
     term_colors = false,
     dim_inactive = {
@@ -45,9 +45,6 @@ require("catppuccin").setup({
 function ColorMyPencils(color)
     color = color or "catppuccin"
     vim.cmd.colorscheme(color)
-
-    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-    ColorMyPencils()
+ColorMyPencils()

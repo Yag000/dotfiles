@@ -16,7 +16,6 @@ alias py=python3
 alias vscode="code"
 alias vsc="code"
 
-alias vim="nvim"
 alias v="nvim"
 
 alias vscode-java='code $(find . -name "*.java")'
