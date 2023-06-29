@@ -1,11 +1,9 @@
-#!/usr/bin/bash
+#!/bin/bash
 
-default_sleep=$((30*60)) # 30 minutes
-sleep_time=$default_sleep
-pacman_sleep_time=$((10)) # 5 minutes
+DEFAULT_SLEEP=$((30*60)) # 30 minutes
+SLEEP_TIME=$DEFAULT_SLEEP
 
-ANIMATED_WALLPAPER=("pacman,300")
-
+ANIMATED_WALLPAPER=("pacman,300" "tetris,300")
 FOLDER=$HOME/Pictures/Wallpapers
 
 get_current_wallpaper(){
@@ -16,61 +14,106 @@ get_random_wallpaper(){
     find "$FOLDER" -mindepth 1 -maxdepth 1 | shuf -n 1
 }
 
-get_random_wallpaper_no_folder(){
+
+get_random_wallpaper_no_animated(){
     find "$FOLDER" -mindepth 1 -maxdepth 1 -type f | shuf -n 1
 }
 
-get_wallpater(){
+get_wallpaper(){
+    local current_wallpaper
     current_wallpaper=$(get_current_wallpaper)
-    WALLPAPER=$(get_random_wallpaper)
-    if [ "$WALLPAPER" == "$current_wallpaper" ]; then
-        WALLPAPER=$(get_random_wallpaper)
+    local wallpaper
+    wallpaper=$(get_random_wallpaper)
+    if is_animated_wallpaper "$current_wallpaper" ; then
+        wallpaper=$(update_animated "$current_wallpaper")
+    elif is_animated_wallpaper "$wallpaper" ; then
+        wallpaper=$(update_animated "$wallpaper")
     fi
-    if is_pacman "$current_wallpaper"; then
-        WALLPAPER=$(get_next_pacman_wallpaper "$current_wallpaper")
-        if [ "$WALLPAPER" == "FAIL" ]; then
-            WALLPAPER="$(get_random_wallpaper_no_folder)"
-        fi
+    echo "$wallpaper"
+}
+
+
+update_animated(){
+    local wallpaper
+    wallpaper=$1
+    local animated_wallpaper
+    animated_wallpaper="$(get_next_animated_wallpaper "$wallpaper")"
+    if [ "$animated_wallpaper" == "FAIL" ]; then
+        wallpaper=$(get_random_wallpaper_no_animated)
     else
-        if is_pacman_folder "$WALLPAPER"; then
-            WALLPAPER=$(get_next_pacman_wallpaper "$WALLPAPER")
-            sleep_time=$pacman_sleep_time
-        else
-            sleep_time=$default_sleep
-        fi
+        wallpaper=$animated_wallpaper
     fi
-    echo "$WALLPAPER"
+
+    echo "$wallpaper"
 }
 
-is_pacman(){
+is_animated_wallpaper(){
+    for i in "${ANIMATED_WALLPAPER[@]}"; do
+        if  echo "$1" | grep -q "$(echo "$i" | cut -d ',' -f 1)"; then
+            return 0
+        fi
+    done
+    return 1
+}
+
+get_animated_info(){
+    local wallpaper=$1
+    for i in "${ANIMATED_WALLPAPER[@]}"; do
+        if  echo "$1" | grep -q "$(echo "$i" | cut -d ',' -f 1)"; then
+            echo "$i"
+        fi
+    done
+    return 1
+}
+
+get_animated_name(){
+    local info
+    info=$(get_animated_info "$1")
+    echo "$info" | cut -d ',' -f 1
+}
+
+get_animated_sleep(){
+    local info
+    info=$(get_animated_info "$1")
+    echo "$info" | cut -d ',' -f 2
+}
+
+get_next_animated_wallpaper(){
+    local wallpaper
     wallpaper=$1
-    echo "$wallpaper" | grep -q "pacman"  > /dev/null && return 0 || return 1
-}
-
-is_pacman_folder(){
-    [ "$1" == "$FOLDER/pacman" ]
-}
-
-get_next_pacman_wallpaper(){
-    wallpaper=$1
-    if is_pacman_folder "$wallpaper"; then
-        next_number=1
+    local name
+    name=$(get_animated_name "$wallpaper")
+    local max_index
+    max_index=$(ls "$FOLDER/$name" | wc -l)
+    if [ "$wallpaper" == "$FOLDER/$name" ]; then
+        next_index=1
     else
-        next_number=$(($(echo "$wallpaper" | grep -oE "[0-9]+")+1))
-        max_index=7
-        if [ $next_number -gt $max_index ]; then
+        next_index=$(($(echo "$wallpaper" | grep -oE "[0-9]+")+1))
+        if [ $next_index -gt "$max_index" ]; then
             echo "FAIL"
             return
         fi
     fi
-    echo "$FOLDER/pacman/cat_pacman_$next_number.png"
-
+    echo "$FOLDER/$name/$name$next_index.png"
 }
 
+
+get_current_sleep_time(){
+    local current_wallpaper
+    current_wallpaper=$(get_current_wallpaper)
+
+    if is_animated_wallpaper "$current_wallpaper" ; then
+        get_animated_sleep "$current_wallpaper"
+    else
+        echo "$DEFAULT_SLEEP"
+    fi
+
+}
 update_wallpaper() {
-    WALLPAPER=$(get_wallpater)
-    feh --bg-scale "$WALLPAPER"
-    betterlockscreen -u "$WALLPAPER" --desc "You better know the password :)" --fx
+    local wallpaper
+    wallpaper=$(get_wallpaper)
+    feh --bg-scale "$wallpaper"
+    betterlockscreen -u "$wallpaper" --desc "You better know the password :)" --fx
 }
 
 if [ $# -gt 0 ]; then
@@ -80,15 +123,15 @@ if [ $# -gt 0 ]; then
             exit 0
             ;;
         -s |--sleep)
-            sleep_time=$2
-            default_sleep=$2
+            SLEEP_TIME=$2
+            DEFAULT_SLEEP=$2
             ;;
         -m|--minutes)
-            sleep_time=$(($2 * 60))
-            default_sleep=$(($2 * 60))
+            SLEEP_TIME=$(($2 * 60))
+            DEFAULT_SLEEP=$(($2 * 60))
             ;;
         -g | --get)
-            get_wallpater
+            get_wallpaper
             exit 0
             ;;
         -h |--help)
@@ -122,5 +165,6 @@ fi
 
 while true; do
     update_wallpaper
-    sleep "$sleep_time"
+    SLEEP_TIME=$(get_current_sleep_time)
+    sleep "$SLEEP_TIME"
 done
