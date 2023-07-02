@@ -295,7 +295,7 @@ bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-2/launcher
 
 # Lock
 bindsym $mod+shift+x exec $HOME/dotfiles/bin/power-menu
-exec --no-startup-id $HOME/bin/locker 20
+exec --no-startup-id $HOME/dotfiles/bin/locker 20
 
 
 ## Screenshots

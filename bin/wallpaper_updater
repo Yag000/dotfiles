@@ -97,7 +97,6 @@ get_next_animated_wallpaper(){
     echo "$FOLDER/$name/$name$next_index.png"
 }
 
-
 get_current_sleep_time(){
     local current_wallpaper
     current_wallpaper=$(get_current_wallpaper)
@@ -109,6 +108,7 @@ get_current_sleep_time(){
     fi
 
 }
+
 update_wallpaper() {
     local wallpaper
     wallpaper=$(get_wallpaper)
@@ -148,6 +148,10 @@ if [ $# -gt 0 ]; then
 
 fi
 
+echo "---------------------------" >> /tmp/wallpaper_updater.log
+echo "Starting wallpaper updater: $(date)" >> /tmp/wallpaper_updater.log
+
+
 # Get the current process ID of the script
 current_pid=$$
 
@@ -158,13 +162,14 @@ previous_pids=$(pgrep -f "$(basename "$0")")
 previous_pids=$(echo "$previous_pids" | grep -vw "$current_pid")
 
 # Kill the previous instances of the script
-if [ -n "$previous_pids" ]; then
-    echo "Killing previous instances: $previous_pids"
-    kill "$previous_pids"
-fi
+for pid in $previous_pids; do
+    echo "Killing previous instance: $pid" >> /tmp/wallpaper_updater.log
+    kill "$pid" >> /tmp/wallpaper_updater.log
+done
 
 while true; do
     update_wallpaper
     SLEEP_TIME=$(get_current_sleep_time)
+    echo "Sleeping for $SLEEP_TIME seconds" >> /tmp/wallpaper_updater.log
     sleep "$SLEEP_TIME"
 done

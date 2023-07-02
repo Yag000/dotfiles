@@ -14,6 +14,7 @@ lsp.ensure_installed({
 lsp.nvim_workspace()
 
 local cmp = require("cmp")
+
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
     ["<Tab>"] = cmp.mapping.confirm({ select = true }),
@@ -78,5 +79,3 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true,
 })
-
-
