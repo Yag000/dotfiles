@@ -9,7 +9,6 @@
 - [ ] Add notification applet
 - [ ] Split i3 config file (probably not)
 - [ ] Betterlockscreen
-- [ ] Changing wallpaper every X minutes
 
 ## Neovim
 
@@ -29,8 +28,6 @@
 - [ ] Create a way to have a session default keyboard layout
 - [ ] Calendar
 - [ ] Change terminal zoom depending on the monitor
-- [ ] Suspend does not work due to the 30s delay of locking...
-- [ ] Improve wallpapers (for example simulate a pacman game etc...)
 
 ## Already done
 
@@ -56,6 +53,7 @@
 - [x] Stop playing on lock
 - [x] Improve polybar config
 - [x] Change menu colors (app runner and power menu) to match catppuccin theme.
+- [x] Changing wallpaper every X minutes
 
 ### Neovim
 
@@ -78,3 +76,9 @@
 - [x] Make tmux theme work
 - [x] Improve tmux sessions (searching them)
 - [x] Improve tmux-sessionizer speed
+
+### Other
+
+- [x] win + shift + w to change wallpaper
+- [x] Suspend does not work due to the 30s delay of locking...
+- [x] Improve wallpapers (for example simulate a pacman game etc...)

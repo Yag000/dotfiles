@@ -8,15 +8,14 @@ local formatting = null_ls.builtins.formatting
 
 local sources = {
     formatting.black,
-    formatting.stylua,
-    formatting.ocamlformat,
-    formatting.clang_format,
-    formatting.beautysh,
+    -- formatting.stylua,
+    -- formatting.ocamlformat,
+    -- formatting.clang_format,
+    -- formatting.beautysh,
     formatting.markdownlint,
     formatting.prettierd,
     formatting.shfmt,
 }
-
 
 null_ls.setup({
     sources = sources,

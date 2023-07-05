@@ -309,6 +309,13 @@ bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewi
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 
+## Wallpaper
+exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
+exec_always --no-startup-id $HOME/dotfiles/bin/wallpaper_updater
+
+bindsym $mod+Shift+w exec --no-startup-id $HOME/dotfiles/bin/wallpaper_updater -t
+
+
 # Start applications
 exec --no-startup-id i3-msg "workspace 2; exec i3-sensible-terminal"
 exec --no-startup-id firefox
@@ -316,13 +323,11 @@ exec --no-startup-id discord
 
 
 # Set keyboard layout this is important besause the i3bar assumes the keyboard layout to be eu when i3 is started
-exec_always "$HOME/dotfiles/bin/keyboard_layout_toggle eu"
+exec "$HOME/dotfiles/bin/keyboard_layout_toggle eu"
 
 # For this to work you need to install autotiling  (https://github.com/nwg-piotr/autotiling)
 exec_always --no-startup-id autotiling 
 
-exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
-exec_always --no-startup-id $HOME/dotfiles/bin/wallpaper_updater
 
 # Natural scrolling for my touchpad
 exec --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "libinput Natural Scrolling Enabled" 1
