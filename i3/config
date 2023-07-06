@@ -298,6 +298,9 @@ bindsym $mod+shift+x exec $HOME/dotfiles/bin/power-menu
 exec --no-startup-id $HOME/dotfiles/bin/locker 20
 
 
+# Keyboard toggle
+bindsym $mod+Shift+t exec $HOME/dotfiles/bin/keyboard_layout_toggle 
+
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
