@@ -51,8 +51,8 @@ bindsym XF86AudioPrev exec playerctl previous
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Shift+Return exec i3-sensible-terminal --working-directory $(xcwd) 
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+Return exec alacritty --working-directory $(xcwd) 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -291,7 +291,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # dmenu alternative: rofi, using an assortment of launchers from: https://github.com/adi1090x/rofi
-bindsym $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-2/launcher.sh
+bindsym $mod+d exec --no-startup-id $HOME/dotfiles/rofi/launcher.sh
 
 # Lock
 bindsym $mod+shift+x exec $HOME/dotfiles/bin/power-menu

@@ -3,4 +3,4 @@
 # Just use a power menu fromhttps://github.com/adi1090x/rofi
 #
 
-$HOME/.config/rofi/powermenu/type-1/powermenu.sh
+$HOME/dotfiles/rofi/powermenu.sh
