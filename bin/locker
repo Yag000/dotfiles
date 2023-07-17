@@ -6,4 +6,4 @@ else
     DELAY=$1
 fi
 
-xautolock -detectsleep -time $DELAY -locker "$HOME/dotfiles/bin/lock" -notify 30 -notifier "notify-send -u normal -t 10000 -- 'LOCKING screen in 30 seconds'"
+xautolock -detectsleep -time "$DELAY" -locker "$HOME/dotfiles/bin/lock" -notify 30 -notifier "notify-send -u normal -t 10000 -- 'LOCKING screen in 30 seconds'"

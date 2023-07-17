@@ -11,6 +11,6 @@ rplugin.vim
 .netrwhist
 harpoon.json
 telescope_history
-tree-sitter-cpp
-tree-sitter-python
+
+tree-sitter-*/
 

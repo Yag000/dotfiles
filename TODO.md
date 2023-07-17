@@ -8,13 +8,13 @@
 
 - [ ] Add notification applet
 - [ ] Split i3 config file (probably not)
-- [ ] Betterlockscreen
 
 ## Neovim
 
 - [ ] Solve issue with empty padding on the right and bottom
 - [ ] Markdown preview (I doubt it)
 - [ ] clippy for rust
+- [ ] Setup for git commit history etc...
 
 ## zsh
 
@@ -22,6 +22,7 @@
 
 - [ ] Shortcut for clearing the terminal
 - [ ] Solve issue with empty padding on the bottom
+- [ ] zoxide + tmux-sessionizer does not work correctly (there is not an update for the queries)
 
 ## Other
 
@@ -54,6 +55,7 @@
 - [x] Improve polybar config
 - [x] Change menu colors (app runner and power menu) to match catppuccin theme.
 - [x] Changing wallpaper every X minutes
+- [x] Betterlockscreen
 
 ### Neovim
 

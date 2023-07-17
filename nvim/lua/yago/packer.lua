@@ -166,7 +166,6 @@ return require("packer").startup(function(use)
     use('hrsh7th/nvim-cmp') -- For LSP completion
     use('hrsh7th/cmp-nvim-lsp')
     use('hrsh7th/cmp-buffer')
-    use('hrsh7th/vim-vsnip')      -- For snippets
-    use('andrewradev/switch.vim') -- For Lean switch support
-    use('tomtom/tcomment_vim')    -- For commenting motions
+    use('hrsh7th/vim-vsnip')   -- For snippets
+    use('tomtom/tcomment_vim') -- For commenting motions
 end)

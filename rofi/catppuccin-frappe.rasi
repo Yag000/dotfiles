@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : Yago Iglesias (Yago000)
+ * Github : @Yag000
+ * 
+ * Colors
+ **/
+
+* {
+    background:     #303446FF;
+    background-alt: #292C3CFF;
+    foreground:     #C6D0f5FF;
+    selected:       #EEBEBEFF;
+    active:         #A6D189FF;
+    urgent:         #E78284FF;
+}
