@@ -324,6 +324,9 @@ exec --no-startup-id firefox
 exec --no-startup-id discord
 
 
+# Keyboard bindings for programs
+bindsym $mod+Shift+f exec --no-startup-id "i3-msg workspace number 1; pgrep firefox || firefox"
+
 # Set keyboard layout this is important besause the i3bar assumes the keyboard layout to be eu when i3 is started
 exec "$HOME/dotfiles/bin/keyboard_layout_toggle eu"
 
