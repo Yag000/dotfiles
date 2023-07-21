@@ -3,7 +3,6 @@
 DEFAULT_SLEEP=$((60 * 30)) # 30 minutes
 SLEEP_TIME=$DEFAULT_SLEEP
 
-ANIMATED_WALLPAPER=("pacman" "tetris" "heart_cat")
 FOLDER=$HOME/Pictures/Wallpapers
 
 get_current_wallpaper(){
@@ -24,10 +23,10 @@ get_wallpaper(){
     current_wallpaper=$(get_current_wallpaper)
     local wallpaper
     wallpaper=$(get_random_wallpaper)
-    if is_animated_wallpaper "$current_wallpaper" ; then
+    if is_animated_wallpaper "$current_wallpaper"; then
         wallpaper=$(update_animated "$current_wallpaper")
     elif is_animated_wallpaper "$wallpaper" ; then
-        wallpaper=$(update_animated "$wallpaper")
+        wallpaper=$(update_animated "$wallpaper"ii)
     fi
     echo "$wallpaper"
 }
@@ -49,8 +48,8 @@ update_animated(){
 }
 
 is_animated_wallpaper(){
-    for i in "${ANIMATED_WALLPAPER[@]}"; do
-        if echo "$1" | grep -q "$i"; then
+    for i in $(ls -d $FOLDER/*/); do
+        if echo "$1" | grep -q "$(basename "$i")"; then
             return 0
         fi
     done
@@ -58,10 +57,9 @@ is_animated_wallpaper(){
 }
 
 get_animated_wallpaper_name(){
-    for i in "${ANIMATED_WALLPAPER[@]}"; do
-        if echo "$1" | grep -q "$i"; then
-            echo "$i"
-            return 0
+    for i in $(ls -d $FOLDER/*/); do
+        if echo "$1" | grep -q "$(basename "$i")"; then
+            basename "$i"
         fi
     done
 }
@@ -71,12 +69,9 @@ get_animated_sleep(){
     local name
     local number
     name="$1"
-    for i in "${ANIMATED_WALLPAPER[@]}"; do
-        if echo "$name" | grep -q "$i"; then
-            number=$(ls "$FOLDER/$i" | wc -l)
-            echo "$(($DEFAULT_SLEEP/ $number))"
-        fi
-    done
+    name=$(get_next_animated_wallpaper "$name")
+    number=$(ls "$FOLDER/$name" | wc -l)
+    echo "$(($DEFAULT_SLEEP/ $number))"
 }
 
 get_next_animated_wallpaper(){
@@ -100,8 +95,7 @@ get_next_animated_wallpaper(){
             return
         fi
     fi
-    echo "$FOLDER/$name/$name$next_index.png" >> /tmp/wallpaper_updater.log
-    echo "$FOLDER/$name/$name$next_index.png"
+    echo "$FOLDER/$name/$name$next_index.png" | tee /tmp/wallpaper_updater.log
 }
 
 get_current_sleep_time(){
@@ -117,6 +111,7 @@ get_current_sleep_time(){
 }
 
 update_wallpaper() {
+    echo "--------------------------------">> /tmp/wallpaper_updater.log
     local wallpaper
     wallpaper=$(get_wallpaper)
     feh --bg-scale "$wallpaper"
