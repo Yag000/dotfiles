@@ -330,7 +330,7 @@ exec --no-startup-id discord
 bindsym $mod+Shift+f exec --no-startup-id "i3-msg workspace number 1; pgrep firefox || firefox"
 
 # Set keyboard layout this is important besause the i3bar assumes the keyboard layout to be eu when i3 is started
-exec "$HOME/dotfiles/bin/keyboard_layout_toggle eu"
+exec "$HOME/dotfiles/bin/keyboard_layout_toggle -reset"
 
 # For this to work you need to install autotiling  (https://github.com/nwg-piotr/autotiling)
 exec_always --no-startup-id autotiling 

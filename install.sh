@@ -1,5 +1,7 @@
 POS=$HOME/dotfiles
 
+mkdir "$POS/ressources"
+
 mkdir "$HOME/.old_dotfiles"
 
 mv "$HOME/.aliases" "$HOME/.old_dotfiles"

@@ -1,12 +1,13 @@
 #!/usr/bin/bash
 
 
-workplaces_dir=~/dotfiles/ressources/workplaces.txt
+workplaces_file=~/dotfiles/ressources/workplaces.txt
 
 if [[ $# -eq 1 ]]; then
-    cat $workplaces_dir
+    [[ -z $workplaces_file ]] || touch $workplaces_file
+    cat $workplaces_file
 else
-    find ~/Documents/l2_math-info/s4 ~/Projects -maxdepth 3 -name .git -exec dirname {} \; -prune > $workplaces_dir
-    cat $workplaces_dir
+    find ~/Documents/l2_math-info/s4 ~/Projects -maxdepth 3 -name .git -exec dirname {} \; -prune > $workplaces_file
+    cat $workplaces_file
     echo "$HOME/dotfiles"
 fi

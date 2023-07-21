@@ -11,7 +11,6 @@
 
 ## Neovim
 
-- [ ] Solve issue with empty padding on the right and bottom
 - [ ] Markdown preview (I doubt it)
 - [ ] clippy for rust
 - [ ] Setup for git commit history etc...
@@ -26,7 +25,6 @@
 
 ## Other
 
-- [ ] Create a way to have a session default keyboard layout
 - [ ] Calendar
 - [ ] Change terminal zoom depending on the monitor
 
@@ -84,3 +82,4 @@
 - [x] win + shift + w to change wallpaper
 - [x] Suspend does not work due to the 30s delay of locking...
 - [x] Improve wallpapers (for example simulate a pacman game etc...)
+- [x] Create a way to have a session default keyboard layout

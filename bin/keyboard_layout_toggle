@@ -1,15 +1,37 @@
 #!/usr/bin/bash
 
+keyboard_file="$HOME/dotfiles/ressources/keyboard.txt"
+
 # This script is used to quickly change the keyboard layout between es and eu
 
 # Get the current keyboard layout
-current_layout=$(setxkbmap -query | grep layout | awk '{print $2}')
 
+change_layout(){
+    new_layout=$1
+    setxkbmap "$new_layout"
+    "$HOME/dotfiles/bin/unlock_caps" # Disable caps lock
+    setxkbmap -option caps:none # Disable caps lock key
+
+    notify-send "Keyboard layout changed to $new_layout"
+    echo "$new_layout" | tee "$keyboard_file"
+}
+
+reset_layout(){
+if [[ $current_layout -ne $(cat "$keyboard_file") ]]; then
+    change_layout "$(cat "$keyboard_file")"
+fi
+
+}
+
+current_layout=$(setxkbmap -query | grep layout | awk '{print $2}')
 
 if [ $# -ne 0 ]; then
     if [ $# = 1 ]; then
         if [ "$1" = "-query" ]; then
             echo "$current_layout"
+            exit 0
+        elif [[ "$1" = "-reset" ]]; then
+            reset_layout
             exit 0
         else
             new_layout=$1
@@ -23,8 +45,11 @@ else
 fi
 
 
-# Change the keyboard layout
+[[ -z $keyboard_file ]] || (echo "$current_layout"> "$keyboard_file")
 
+reset_layout
+
+# Change the keyboard layout
 if [ "$new_layout" = "" ]; then
     if [ "$current_layout" = "es" ]; then
         new_layout="eu"
@@ -33,11 +58,6 @@ if [ "$new_layout" = "" ]; then
     fi
 fi
 
-setxkbmap "$new_layout"
-"$HOME/dotfiles/bin/unlock_caps" # Disable caps lock
-setxkbmap -option caps:none # Disable caps lock key
-
-notify-send "Keyboard layout changed to $new_layout"
-echo "$new_layout"
+change_layout "$new_layout"
 
 exit 0
