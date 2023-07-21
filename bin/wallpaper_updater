@@ -74,7 +74,7 @@ get_animated_sleep(){
     for i in "${ANIMATED_WALLPAPER[@]}"; do
         if echo "$name" | grep -q "$i"; then
             number=$(ls "$FOLDER/$i" | wc -l)
-            echo "$(($number / $DEFAULT_SLEEP))"
+            echo "$(($DEFAULT_SLEEP/ $number))"
         fi
     done
 }
