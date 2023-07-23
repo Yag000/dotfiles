@@ -5,12 +5,18 @@ keyboard_file="$HOME/dotfiles/ressources/keyboard.txt"
 # This script is used to quickly change the keyboard layout between es and eu
 
 # Get the current keyboard layout
+#
+
+block_caps(){
+    "$HOME/dotfiles/bin/unlock_caps" # Disable caps lock
+    setxkbmap -option caps:none # Disable caps lock key
+}
 
 change_layout(){
     new_layout=$1
     setxkbmap "$new_layout"
-    "$HOME/dotfiles/bin/unlock_caps" # Disable caps lock
-    setxkbmap -option caps:none # Disable caps lock key
+
+    block_caps
 
     notify-send "Keyboard layout changed to $new_layout"
     echo "$new_layout" | tee "$keyboard_file"
@@ -31,6 +37,7 @@ if [ $# -ne 0 ]; then
             echo "$current_layout"
             exit 0
         elif [[ "$1" = "-reset" ]]; then
+            block_caps
             reset_layout
             exit 0
         else
