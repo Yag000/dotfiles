@@ -13,7 +13,7 @@ local sources = {
     -- formatting.stylua,
     -- formatting.ocamlformat,
     -- formatting.clang_format,
-    -- formatting.beautysh,
+    formatting.beautysh,
 
     formatting.markdownlint,
     formatting.prettierd,

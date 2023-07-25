@@ -69,8 +69,9 @@ get_animated_sleep(){
     local name
     local number
     name="$1"
-    name=$(get_next_animated_wallpaper "$name")
+    name=$(get_animated_wallpaper_name "$name")
     number=$(ls "$FOLDER/$name" | wc -l)
+    echo "$(($DEFAULT_SLEEP/ $number))" >> /tmp/wallpaper_updater.log
     echo "$(($DEFAULT_SLEEP/ $number))"
 }
 
@@ -95,16 +96,22 @@ get_next_animated_wallpaper(){
             return
         fi
     fi
-    echo "$FOLDER/$name/$name$next_index.png" | tee /tmp/wallpaper_updater.log
+    echo "$FOLDER/$name/$name$next_index.png" >> /tmp/wallpaper_updater.log
+    echo "$FOLDER/$name/$name$next_index.png"
 }
 
 get_current_sleep_time(){
+
+    echo "Getting sleep time" >> /tmp/wallpaper_updater.log
     local current_wallpaper
+
     current_wallpaper=$(get_current_wallpaper)
 
     if is_animated_wallpaper "$current_wallpaper" ; then
+        echo "Getting animated sleep time" >> /tmp/wallpaper_updater.log
         get_animated_sleep "$current_wallpaper"
     else
+        echo "Getting default sleep time" >> /tmp/wallpaper_updater.log
         echo "$DEFAULT_SLEEP"
     fi
 
@@ -124,7 +131,7 @@ if [ $# -gt 0 ]; then
             update_wallpaper
             exit 0
             ;;
-        -s |--sleep)
+        -s |--seconds)
             SLEEP_TIME=$2
             DEFAULT_SLEEP=$2
             ;;
@@ -139,7 +146,7 @@ if [ $# -gt 0 ]; then
         -h |--help)
             echo "Usage: wallpaper_updater [OPTION]"
             echo "  -t, --toggle    update wallpaper once"
-            echo "  -s, --sleep     set sleep time in seconds, default is 1800 (30 minutes))"
+            echo "  -s, --seconds set sleep time in seconds, default is 1800 (30 minutes))"
             echo "  -m  --minutes  set sleep time in minutes, default is 30 minutes"
             echo "  -h, --help      display this help and exit"
             exit 0
@@ -150,8 +157,7 @@ if [ $# -gt 0 ]; then
 
 fi
 
-echo "---------------------------" >> /tmp/wallpaper_updater.log
-echo "Starting wallpaper updater: $(date)" >> /tmp/wallpaper_updater.log
+echo "Starting wallpaper updater: $(date)" > /tmp/wallpaper_updater.log
 
 
 # Get the current process ID of the script

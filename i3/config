@@ -213,6 +213,7 @@ assign [class="discord"] $ws3
 assign [class="Spotify"] $ws4
 assign [class="kdenlive"] $ws5
 assign [class="Steam"] $ws7
+assign [class="steam"] $ws7
 assign [class="minecraft-launcher"] $ws7
 
 # reload the configuration file
