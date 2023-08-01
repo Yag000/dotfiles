@@ -23,20 +23,17 @@ change_layout(){
 }
 
 reset_layout(){
-if [[ $current_layout -ne $(cat "$keyboard_file") ]]; then
     change_layout "$(cat "$keyboard_file")"
-fi
-
 }
 
 current_layout=$(setxkbmap -query | grep layout | awk '{print $2}')
 
 if [ $# -ne 0 ]; then
     if [ $# = 1 ]; then
-        if [ "$1" = "-query" ]; then
+        if [ "$1" = "--query" ]; then
             echo "$current_layout"
             exit 0
-        elif [[ "$1" = "-reset" ]]; then
+        elif [[ "$1" = "--reset" ]]; then
             block_caps
             reset_layout
             exit 0
@@ -54,7 +51,9 @@ fi
 
 [[ -z $keyboard_file ]] || (echo "$current_layout"> "$keyboard_file")
 
-reset_layout
+if [[ $current_layout -ne $(cat "$keyboard_file") ]]; then
+    reset_layout
+fi
 
 # Change the keyboard layout
 if [ "$new_layout" = "" ]; then

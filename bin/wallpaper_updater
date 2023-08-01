@@ -26,7 +26,7 @@ get_wallpaper(){
     if is_animated_wallpaper "$current_wallpaper"; then
         wallpaper=$(update_animated "$current_wallpaper")
     elif is_animated_wallpaper "$wallpaper" ; then
-        wallpaper=$(update_animated "$wallpaper"ii)
+        wallpaper=$(update_animated "$wallpaper")
     fi
     echo "$wallpaper"
 }
