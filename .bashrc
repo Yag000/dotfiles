@@ -2,6 +2,7 @@
 
 # Reset path (or else it gets longer each time this is sourced)
 export PATH=$(getconf PATH)
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # http://unix.stackexchange.com/questions/40678/can-i-make-there-are-stopped-jobs-harder-to-kill
 prompt_command() {
@@ -97,6 +98,6 @@ export QUOTING_STYLE=literal
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 [[ -f "$HOME/.functions" ]] && source "$HOME/.functions"
 
-. "$HOME/.cargo/env"
+source $HOME/.cargo/env
 
 eval "$(zoxide init bash)"
