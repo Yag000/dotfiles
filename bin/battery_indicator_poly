@@ -58,7 +58,7 @@ sub print_text(){
         $text = " ";
     }
 
-    $text .= "$percent%";
+    $text .= " $percent%";
 
 
     # ---------------------------

@@ -322,7 +322,7 @@ bindsym $mod+Shift+w exec --no-startup-id $HOME/dotfiles/bin/wallpaper_updater -
 
 
 # Start applications
-exec --no-startup-id i3-msg "workspace 2; exec i3-sensible-terminal"
+exec --no-startup-id i3-msg "workspace 2; exec alacritty"
 exec --no-startup-id firefox
 exec --no-startup-id discord
 
@@ -338,7 +338,7 @@ exec_always --no-startup-id autotiling
 
 
 # Natural scrolling for my touchpad
-exec --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "libinput Natural Scrolling Enabled" 1
 
 
 # Mute audio on startup
