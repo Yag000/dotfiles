@@ -155,17 +155,4 @@ return require("packer").startup(function(use)
 
     use("norcalli/nvim-colorizer.lua")                           -- colorize hex codes, etc...
 
-    -- Lean
-    --
-    use('Julian/lean.nvim')
-    use('neovim/nvim-lspconfig')
-    use('nvim-lua/plenary.nvim')
-
-    -- Optional Dependencies:
-
-    use('hrsh7th/nvim-cmp') -- For LSP completion
-    use('hrsh7th/cmp-nvim-lsp')
-    use('hrsh7th/cmp-buffer')
-    use('hrsh7th/vim-vsnip')   -- For snippets
-    use('tomtom/tcomment_vim') -- For commenting motions
 end)
