@@ -18,12 +18,14 @@ change_layout(){
 
     block_caps
 
-    notify-send "Keyboard layout changed to $new_layout"
+    if [ "$2" != "--no-notification" ]; then
+        notify-send "Keyboard layout changed to $new_layout"
+    fi
     echo "$new_layout" | tee "$keyboard_file"
 }
 
 reset_layout(){
-    change_layout "$(cat "$keyboard_file")"
+    change_layout "$(cat "$keyboard_file")" "--no-notification"
 }
 
 current_layout=$(setxkbmap -query | grep layout | awk '{print $2}')

@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:hack 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -305,8 +305,8 @@ bindsym $mod+Shift+t exec $HOME/dotfiles/bin/keyboard_layout_toggle
 
 ## Screenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "$HOME/Pictures/$(date +"%Y-%m-%d_%H:%M:%S").png"
-bindsym Shift+Print exec --no-startup-id maim --select "$HOME/Pictures/$(date +"%Y-%m-%d_%H:%M:%S").png"
+bindsym $mod+Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
+bindsym Shift+Print exec --no-startup-id maim --select "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
 
 ## Clipboard Screenshots
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
@@ -341,6 +341,9 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "libinput Natural Scrolling Enabled" 1
 
 
+# Fast package manager update 
+bindsym $mod+Shift+u exec --no-startup-id "alacritty -e yay -Syu"
+
 # Mute audio on startup
-exec -no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1
+exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1
 
