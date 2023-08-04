@@ -1,8 +1,11 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
+source ~/.profile
+
 # Reset path (or else it gets longer each time this is sourced)
 export PATH=$(getconf PATH)
 export PATH="$HOME/.cargo/bin:$PATH"
+
 
 # http://unix.stackexchange.com/questions/40678/can-i-make-there-are-stopped-jobs-harder-to-kill
 prompt_command() {

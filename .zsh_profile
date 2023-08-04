@@ -1,2 +1,5 @@
+source  ~/.profile
+
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^g "git_diff\n"
+export EDITOR="nvim"
