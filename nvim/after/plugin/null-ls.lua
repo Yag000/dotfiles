@@ -3,26 +3,21 @@ local null_ls = require("null-ls")
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
-
---TODO: resolve formatters not working
-
--- The commented out formatters work directly with lsp-zero, so there is no need to use null-ls for them.
-
 local sources = {
-    formatting.black,
-    -- formatting.stylua,
-    -- formatting.ocamlformat,
-    -- formatting.clang_format,
-    formatting.beautysh,
+	formatting.black,
+	-- formatting.stylua,
+	-- formatting.ocamlformat,
+	-- formatting.clang_format,
+	formatting.beautysh,
 
-    formatting.markdownlint,
-    formatting.prettierd,
-    formatting.shfmt,
+	formatting.markdownlint,
+	formatting.prettierd,
+	formatting.shfmt,
 
-    diagnostics.markdownlint,
-    diagnostics.cppcheck,
+	diagnostics.markdownlint,
+	diagnostics.cppcheck,
 }
 
 null_ls.setup({
-    sources = sources,
+	sources = sources,
 })
