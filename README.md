@@ -29,7 +29,8 @@ My personal dotfiles
 - **fzf**
 - **xcwd** <https://github.com/schischi/xcwd>
 - **bat**
-
+- **main**
+- **lf**
 - Many others that I have no yet listed (sorry :( )
 
 ## Installation
