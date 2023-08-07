@@ -43,26 +43,25 @@ open STDERR, '>', '/dev/null' or die "Cannot open /dev/null$!";
 sub print_text(){
     if($status eq 'Discharging') {
         if ($percent <= 10) {
-            $text = " ";
-            $color="#FF0000";
+            $text = "%{F#e78284} ";
         } elsif ($percent <  25 ) {
-            $text = " ";
+            $text = "%{F#e5c890} ";
         } elsif ($percent < 50) {
-            $text = " ";
+            $text = "%{F#c6d0f5} ";
         } elsif ($percent < 75) {
-            $text =" ";
+            $text ="%{F#c6d0f5} ";
         } else {
-            $text = " ";
+            $text = "%{F#c6d0f5} ";
         }
     } else {
-        $text = " ";
+        $text = "%{F#c6d0f5} ";
     }
 
-    $text .= " $percent%";
+    $text .= " $percent";
 
 
     # ---------------------------
-    print "$text\n";
+    print "$text%%{F-}\n";
 }
 
 print_text() ;
