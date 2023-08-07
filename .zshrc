@@ -88,7 +88,6 @@ plugins=(
     zsh-autosuggestions
     copyfile
     zsh-history-substring-search
-    z
     zsh-syntax-highlighting
     zsh-autocomplete
     you-should-use
@@ -135,5 +134,5 @@ export PATH="$HOME/dotfiles/bin/:$HOME/.local/bin:$HOME/.elan/bin:$HOME/go/bin:$
 
 # opam configuration
 [[ ! -r /home/yago/.opam/opam-init/init.zsh ]] || source /home/yago/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-fpath+=${ZDOTDIR:-~}/.zsh_functions
 
+eval "$(zoxide init zsh)"

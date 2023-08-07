@@ -21,7 +21,6 @@
 
 - [ ] Shortcut for clearing the terminal
 - [ ] Solve issue with empty padding on the bottom
-- [ ] zoxide + tmux-sessionizer does not work correctly (there is not an update for the queries)
 - [ ] shortcut to swap window
 - [ ] Improve theeme icons
 
@@ -78,6 +77,7 @@
 - [x] Make tmux theme work
 - [x] Improve tmux sessions (searching them)
 - [x] Improve tmux-sessionizer speed
+- [x] zoxide + tmux-sessionizer does not work correctly (there is not an update for the queries)
 
 ### Other
 
