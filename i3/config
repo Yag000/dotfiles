@@ -220,8 +220,6 @@ assign [class="minecraft-launcher"] $ws7
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -304,8 +302,8 @@ exec --no-startup-id $HOME/dotfiles/bin/locker 20
 bindsym $mod+Shift+t exec $HOME/dotfiles/bin/keyboard_layout_toggle 
 
 ## Screenshots
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)
-bindsym $mod+Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
 bindsym Shift+Print exec --no-startup-id maim --select "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
 
 ## Clipboard Screenshots
@@ -314,10 +312,11 @@ bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewi
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 
-## Wallpaper
+## Compositor
 exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
-exec_always --no-startup-id $HOME/dotfiles/bin/wallpaper_updater
 
+## Wallpaper
+exec_always --no-startup-id $HOME/dotfiles/bin/wallpaper_updater
 bindsym $mod+Shift+w exec --no-startup-id $HOME/dotfiles/bin/wallpaper_updater -t
 
 
@@ -336,14 +335,15 @@ exec "$HOME/dotfiles/bin/keyboard_layout_toggle --reset"
 # For this to work you need to install autotiling  (https://github.com/nwg-piotr/autotiling)
 exec_always --no-startup-id autotiling 
 
-
 # Natural scrolling for my touchpad
 exec_always --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "libinput Natural Scrolling Enabled" 1
 
 
-# Fast package manager update 
+# Quick package manager update 
 bindsym $mod+Shift+u exec --no-startup-id "alacritty -e yay -Syu"
+
+# Quick links
+bindsym $mod+Shift+s exec --no-startup-id "$HOME/dotfiles/rofi/quick-links.sh"
 
 # Mute audio on startup
 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1
-

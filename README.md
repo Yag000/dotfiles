@@ -31,7 +31,9 @@ My personal dotfiles
 - **bat**
 - **main**
 - **lf**
-- Many others that I have no yet listed (sorry :( )
+- **zoxide** : <https://github.com/ajeetdsouza/zoxide#installation>
+
+- Many others that I have no yet listed,  sorry :(
 
 ## Installation
 
