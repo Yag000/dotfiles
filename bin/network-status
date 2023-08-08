@@ -1,0 +1,75 @@
+#!/bin/bash
+
+MODE_FILE="$HOME/.local/share/network-status-mode"
+[[ -f "$MODE_FILE" ]] || echo "both" > "$MODE_FILE"
+
+
+
+
+# Get the lines containing "connected" and "wifi"
+connected_wifi_line=$( nmcli -f IN-USE,BARS,SIGNAL,SSID device wifi)
+connected_wifi_name=$(echo "$connected_wifi_line" | awk '/^\*/{if (NR!=1) {print $4}}')
+
+# Extract the device name from the line if found, or set it to "None" if not found
+if [ -n "$connected_wifi_line" ]; then
+    case $(echo "$connected_wifi_line" | awk '/^\*/{if (NR!=1) {print $2}}') in
+        ____ ) connection_strength="󰤯"
+            ;;
+        ▂___ ) connection_strength="󰤟"
+            ;;
+        ▂▄__ ) connection_strength="󰤢"
+            ;;
+        ▂▄▆_ ) connection_strength="󰤥"
+            ;;
+        ▂▄▆█ ) connection_strength="󰤨"
+            ;;
+        * ) connection_strength="󰤮" ;;
+    esac
+else
+    connection_strength="󰤮"
+fi
+
+
+# We now handle the arguments.
+# If no argument is given, we print the connection strength and the name of the connected connected wifi
+# If the argument is "--strength", we print only the connection strength
+# If the argument is "--name", we print only the name of the connected wifi
+# If the argument is "--help", we print the help message
+
+if [ "$1" = "--strength" ]; then
+    echo "strength" > "$MODE_FILE"
+elif [ "$1" = "--name" ]; then
+    echo "name" > "$MODE_FILE"
+elif [ "$1" = "--both" ]; then
+    echo "both" > "$MODE_FILE"
+elif [ "$1" = "--toggle-strength" ]; then
+    case $(cat "$MODE_FILE") in
+        strength ) echo "both" > "$MODE_FILE"
+            ;;
+        name ) echo "strength" > "$MODE_FILE"
+            ;;
+        both ) echo "strength" > "$MODE_FILE"
+            ;;
+    esac
+elif [ "$1" = "--help" ]; then
+    echo "Usage: network-status [OPTION]"
+    echo "Prints the connection strength and the name of the connected wifi, the format will be the same as the last time the script was run"
+    echo "  --strength     Print only the connection strength"
+    echo "  --name         Print only the name of the connected wifi"
+    echo "  --both         Print both the connection strength and the name of the connected wifi"
+    echo "  --help         Print this help message"
+fi
+
+case $(cat "$MODE_FILE") in
+    strength ) echo "$connection_strength"
+        ;;
+    name ) echo "$connected_wifi_name"
+        ;;
+    both )
+        if [[ -z "$connected_wifi_name" ]]; then
+            echo "$connection_strength"
+        else
+            echo "$connection_strength $connected_wifi_name"
+        fi
+        ;;
+esac
