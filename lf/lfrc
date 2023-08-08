@@ -1,6 +1,10 @@
 # interpreter for shell commands
 set shell sh
 
+set previewer ~/.config/lf/preview
+set preview true
+
+
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to
 # exit on error and option '-u' is used to give error for unset variables.
@@ -105,13 +109,6 @@ cmd zip ${{
     cp -r $fx $1
     zip -r $1.zip $1
     rm -rf $1
-}}
-
-# Custom Functions
-cmd mkdir ${{
-  printf "Directory Name: "
-  read ans
-  mkdir $ans
 }}
 
 cmd mkfile ${{
