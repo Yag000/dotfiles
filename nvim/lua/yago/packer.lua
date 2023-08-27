@@ -12,28 +12,6 @@ return require("packer").startup(function(use)
         requires = { { "nvim-lua/plenary.nvim" } },
     })
 
-    -- use({
-    --	"navarasu/onedark.nvim",
-    --	as = "onedark",
-    --	config = function()
-    --		vim.cmd("colorscheme onedark")
-    --	end,
-    --})
-
-    -- use({ 'rose-pine/neovim', as = 'rose-pine', config = function()
-    --	vim.cmd('colorscheme rose-pine')
-    -- end
-    --})
-
-    -- use({
-    --    "folke/tokyonight.nvim",
-    --    as = "tokyonigh",
-
-    --    run = function()
-    --        vim.cmd("colorscheme tokyonight")
-    --    end,
-    -- })
-
     use({ "catppuccin/nvim", as = "catppuccin" })
 
     use({
@@ -86,13 +64,6 @@ return require("packer").startup(function(use)
     })
 
     use({
-        "folke/which-key.nvim",
-        config = function()
-            require("which-key").setup({})
-        end,
-    })
-
-    use({
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
         event = "InsertEnter",
@@ -128,7 +99,6 @@ return require("packer").startup(function(use)
                 },
                 filetypes = {
                     yaml = true,
-                    rs = false, -- For learning rust
                     markdown = true,
                     help = false,
                     gitcommit = true,
@@ -150,10 +120,9 @@ return require("packer").startup(function(use)
     use("christoomey/vim-tmux-navigator")  -- tmux & split window navigation
 
     -- auto closing
-    use("windwp/nvim-autopairs")                                 -- autoclose parens, brackets, quotes, etc...
-    use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tagsuse("m4xshen/autoclose.nvim")
+    use("windwp/nvim-autopairs")       -- autoclose parens, brackets, quotes, etc...
 
-    use("norcalli/nvim-colorizer.lua")                           -- colorize hex codes, etc...
+    use("norcalli/nvim-colorizer.lua") -- colorize hex codes, etc...
 
     -- Add context at the top of the buffer
     use("nvim-treesitter/nvim-treesitter-context")
