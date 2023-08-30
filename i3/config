@@ -112,8 +112,8 @@ bindsym $mod+a focus parent
 
 # Set monitors
 
-set $monitor1 "eDP1"
-set $monitor2 "HDMI1"
+set $monitor1 "eDP-1"
+set $monitor2 "HDMI-1"
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.

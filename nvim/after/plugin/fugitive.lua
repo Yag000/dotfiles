@@ -13,7 +13,7 @@ vim.keymap.set("n", "<leader>gl", function()
 end)
 
 vim.keymap.set("n", "<leader>gb", function()
-    vim.cmd.Git("diff")
+    vim.cmd.Git("blame")
 end)
 
 vim.keymap.set("n", "<leader>gd", function()
