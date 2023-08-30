@@ -22,7 +22,7 @@
 - [ ] Shortcut for clearing the terminal
 - [ ] Solve issue with empty padding on the bottom
 - [ ] shortcut to swap window
-- [ ] Improve theeme icons
+- [ ] Improve theme icons
 
 ## Other
 
