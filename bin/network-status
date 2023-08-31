@@ -6,6 +6,12 @@ MODE_FILE="$HOME/.local/share/network-status-mode"
 
 
 
+ethernet=$(nmcli -t -f TYPE,STATE device | grep ethernet | cut -d':' -f2)
+if [ "$ethernet" = "connected" ]; then
+    echo "󰈁"
+    exit 0
+fi
+
 # Get the lines containing "connected" and "wifi"
 connected_wifi_line=$( nmcli -f IN-USE,BARS,SIGNAL,SSID device wifi)
 connected_wifi_name=$(echo "$connected_wifi_line" | awk '/^\*/{if (NR!=1) {print $4}}')

@@ -38,7 +38,7 @@ function print_text(){
         elif [ "$percent" -le 90 ]; then
             text="%{F#c6d0f5}󰂂"
         else
-            text="%{F#c6d0f5}󰂃"
+            text="%{F#c6d0f5}󰁹"
         fi
     else
         text="%{F#c6d0f5}󰂄"
