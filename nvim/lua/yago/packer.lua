@@ -165,4 +165,6 @@ return require("packer").startup(function(use)
     use {
         "nvim-telescope/telescope-live-grep-args.nvim",
     }
+
+    use 'andweeb/presence.nvim'
 end)

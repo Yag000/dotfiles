@@ -4,20 +4,16 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
-	formatting.black,
-	-- formatting.stylua,
-	-- formatting.ocamlformat,
-	-- formatting.clang_format,
-	formatting.beautysh,
+    formatting.black,
+    formatting.beautysh,
 
-	formatting.markdownlint,
-	formatting.prettierd,
-	formatting.shfmt,
+    formatting.markdownlint,
+    formatting.prettierd,
 
-	diagnostics.markdownlint,
-	diagnostics.cppcheck,
+    diagnostics.markdownlint,
+    diagnostics.cppcheck,
 }
 
 null_ls.setup({
-	sources = sources,
+    sources = sources,
 })
