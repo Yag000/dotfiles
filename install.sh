@@ -16,6 +16,7 @@ mv "$HOME/.zsh_profile" "$HOME/.old_dotfiles"
 mv "$HOME/.zshrc" "$HOME/.old_dotfiles"
 mv "$HOME/.alacritty.yml" "$HOME/.old_dotfiles"
 mv "$HOME/.config/betterlockscreenrc" "$HOME/.old_dotfiles"
+mv "$HOME/.config/wallshift" "$HOME/.old_dotfiles"
 
 # Config folders
 mv "$HOME/.config/nvim" "$HOME/.old_dotfiles"
@@ -45,3 +46,4 @@ ln -s "$POS/picom" "$HOME/.config/picom"
 ln -s "$POS/dunst" "$HOME/.config/dunst"
 ln -s "$POS/neofetch" "$HOME/.config/neofetch"
 ln -s "$POS/lf" "$HOME/.config/lf"
+ln -s "$POS/wallshift" "$HOME/.config/wallshift"
