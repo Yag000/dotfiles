@@ -4,6 +4,7 @@ My personal dotfiles
 
 ## Dependencies
 
+- **wallpaper-updater** : <https://github.com/Yag000/wallpaper-updater>
 - **i3**: <https://i3wm.org/>
 - **rofi**: <https://github.com/davatorium/rofi>
 - **polybar**: <https://github.com/polybar/polybar>
