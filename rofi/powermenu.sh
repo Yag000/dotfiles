@@ -12,8 +12,6 @@
 # Modifications made by @Yag000 to fit my needs
 
 # Current Theme
-dir="$HOME/.config/rofi/powermenu/type-1"
-theme='style-4'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
@@ -33,7 +31,7 @@ rofi_cmd() {
     rofi -dmenu \
         -p "$host" \
         -mesg "Uptime: $uptime" \
-        -theme ${dir}/${theme}.rasi
+        -theme dotfiles/rofi/powermenu.rasi
 }
 
 # Confirmation CMD

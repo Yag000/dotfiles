@@ -4,7 +4,7 @@
 # Based on the work by Aditya Shakya (@adi1090x)
 
 # Current Theme
-theme='.config/rofi/themes/quick-links'
+theme='dotfiles/rofi/quick-links'
 
 
 # Options
