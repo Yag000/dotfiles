@@ -6,7 +6,7 @@ MODE_FILE="$HOME/.local/share/network-status-mode"
 
 
 
-ethernet=$(nmcli -t -f TYPE,STATE device | grep ethernet | cut -d':' -f2)
+ethernet=$(nmcli -t -f TYPE,STATE device | grep ethernet | grep connected | cut -d':' -f2)
 if [ "$ethernet" = "connected" ]; then
     echo "󰈁"
     exit 0
