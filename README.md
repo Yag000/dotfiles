@@ -33,7 +33,7 @@ My personal dotfiles
 - **main**
 - **lf**
 - **zoxide** : <https://github.com/ajeetdsouza/zoxide#installation>
-
+- **ripgrep**
 - Many others that I have no yet listed,  sorry :(
 
 ## Installation

@@ -44,7 +44,7 @@ confirm_cmd() {
         -dmenu \
         -p 'Confirmation' \
         -mesg 'Are you Sure?' \
-        -theme ${dir}/${theme}.rasi
+        -theme dotfiles/rofi/powermenu.rasi
 }
 
 # Ask for confirmation
@@ -67,6 +67,7 @@ run_cmd() {
             systemctl reboot
         elif [[ $1 == '--suspend' ]]; then
             "$HOME/dotfiles/bin/lock" & # Lock screen before suspend
+            sleep 1
             mpc -q pause
             amixer set Master mute
             systemctl suspend
