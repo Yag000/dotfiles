@@ -5,8 +5,8 @@ local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
     formatting.black,
-
     formatting.markdownlint,
+    formatting.beautysh,
     formatting.prettierd,
 
     diagnostics.cppcheck,

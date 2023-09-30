@@ -7,7 +7,7 @@ if [[ $# -eq 1 ]]; then
     [[ -z $workplaces_file ]] || touch $workplaces_file
     cat $workplaces_file
 else
-    find ~/Documents/l2_math-info/s4 ~/Projects -maxdepth 3 -name .git -exec dirname {} \; -prune > $workplaces_file
+    find ~/Documents/l3_math-info/s5/PPO5/forks/ ~/Documents/l3_math-info/s5 ~/Documents/l2_math-info/s4 ~/Projects -maxdepth 3 -name .git -exec dirname {} \; -prune > $workplaces_file
     cat $workplaces_file
     echo "$HOME/dotfiles"
 fi

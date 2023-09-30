@@ -328,6 +328,7 @@ exec --no-startup-id firefox
 
 # Keyboard bindings for programs
 bindsym $mod+Shift+f exec --no-startup-id "i3-msg workspace number 1; pgrep firefox || firefox"
+bindsym $mod+Shift+d exec --no-startup-id "i3-msg workspace number 3; pgrep Discord || discord"
 
 # Set keyboard layout this is important besause the i3bar assumes the keyboard layout to be eu when i3 is started
 exec "$HOME/dotfiles/bin/keyboard_layout_toggle --reset"
@@ -340,7 +341,7 @@ exec_always --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "li
 
 
 # Quick package manager update 
-bindsym $mod+Shift+u exec  --no-startup-id "alacritty --hold -e yay -Syu"
+bindsym $mod+Shift+u exec  --no-startup-id alacritty --hold -e yay -Syu | tee /tmp/yay-update"$(date +"%Y-%m-%d_%H:%M:%S")".log
 
 # Quick links
 bindsym $mod+Shift+s exec --no-startup-id "$HOME/dotfiles/rofi/quick-links.sh"
