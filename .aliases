@@ -9,21 +9,21 @@
 
 # Fast access to programs
 
-alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}'"
+alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 alias py=python3
 
-alias vscode="code"
-alias vsc="code"
 
 alias v="nvim"
-
-alias vscode-java='code $(find . -name "*.java")'
-alias vscode-python='code $(find . -name "*.py")'
-alias vscode-ocaml='code $(find . -name "*.ml")'
-alias vscode-c='code $(find . -name "*.c")'
 
 alias removeclass="rm -r *.class"
 
 # Personal
 source $HOME/dotfiles/My_scripts/.my_scripts_aliases
+
+
+export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
+    nvim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
+    -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
+    -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+
