@@ -19,7 +19,9 @@ percent=${percent::-1}
 # ------ Yago additions ------
 function print_text(){
     if [ "$status" == 'Discharging' ]; then
-        if [ "$percent" -le 10 ]; then
+        if [ "$percent" -eq 69 ]; then
+            text="%{F#c6d0f5}󰁿Nice"
+        elif [ "$percent" -le 10 ]; then
             text="%{F#e78284}󰁺"
         elif [ "$percent" -le 20 ]; then
             text="%{F#ef9f76}󰁻"
