@@ -20,7 +20,7 @@ percent=${percent::-1}
 function print_text(){
     if [ "$status" == 'Discharging' ]; then
         if [ "$percent" -eq 69 ]; then
-            text="%{F#c6d0f5}󰁿Nice"
+            text="%{F#c6d0f5}󰁿 Nice"
         elif [ "$percent" -le 10 ]; then
             text="%{F#e78284}󰁺"
         elif [ "$percent" -le 20 ]; then
