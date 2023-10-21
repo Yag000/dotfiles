@@ -317,8 +317,8 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 
 ## Wallpaper
-exec_always --no-startup-id [[ -x wallshift ]] && wallshift --betterlockscreen || .cargo/bin/wallshift --betterlockscreen
-bindsym $mod+Shift+w exec --no-startup-id [[ -x wallshift ]] && wallshift -t --betterlockscreen || .cargo/bin/wallshift -t --betterlockscreen
+exec --no-startup-id [[ -x wallshift ]] && wallshift || .cargo/bin/wallshift 
+bindsym $mod+Shift+w exec --no-startup-id [[ -x wallshift ]] && wallshift -t || .cargo/bin/wallshift -t 
 
 
 # Start applications

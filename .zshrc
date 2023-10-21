@@ -133,7 +133,7 @@ export PATH="$HOME/dotfiles/bin/:$HOME/.local/bin:$HOME/.elan/bin:$HOME/go/bin:$
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # opam configuration
-[[ ! -r /home/yago/.opam/opam-init/init.zsh ]] || source /home/yago/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 eval "$(zoxide init zsh)"
-export PATH=$PATH:/home/yago/.spicetify
+export PATH=$PATH:$HOME/.spicetify
