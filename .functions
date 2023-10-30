@@ -34,3 +34,10 @@ init_ocaml_project(){
     cp -r $HOME/Projects/templates/ocaml/* .
     mv template.opam $1.opam
 }
+
+init_c_project(){
+    mkdir $1
+    cd $1
+    cp -r $HOME/Projects/templates/c/.* .
+    cp -r $HOME/Projects/templates/c/* .
+}
