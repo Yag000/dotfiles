@@ -23,21 +23,21 @@ git_diff() {
 init_rust_project(){
     cargo init $1
     cd $1
-    cp -r $HOME/Projects/templates/rust/.* .
+    cp -r $HOME/.config/templates/rust/.* .
 }
 
 init_ocaml_project(){
     dune init project $1
     cd $1
     git init
-    cp -r $HOME/Projects/templates/ocaml/.* .
-    cp -r $HOME/Projects/templates/ocaml/* .
+    cp -r $HOME/.config/templates/ocaml/.* .
+    cp -r $HOME/.config/templates/ocaml/* .
     mv template.opam $1.opam
 }
 
 init_c_project(){
     mkdir $1
     cd $1
-    cp -r $HOME/Projects/templates/c/.* .
-    cp -r $HOME/Projects/templates/c/* .
+    cp -r $HOME/.config/templates/c/.* .
+    cp -r $HOME/.config/templates/c/* .
 }
