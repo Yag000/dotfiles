@@ -101,6 +101,5 @@ export QUOTING_STYLE=literal
 [[ -f "$HOME/.aliases" ]] && source "$HOME/.aliases"
 [[ -f "$HOME/.functions" ]] && source "$HOME/.functions"
 
-source $HOME/.cargo/env
 
 eval "$(zoxide init bash)"

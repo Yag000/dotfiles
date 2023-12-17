@@ -102,7 +102,7 @@ source ~/.aliases
 source ~/.functions
 source ~/.zsh_profile
 
-export PATH="$HOME/dotfiles/bin/:$HOME/.local/bin:$HOME/.elan/bin:$HOME/go/bin:$PATH"
+export PATH="$HOME/dotfiles/bin/:$HOME/.local/bin:$HOME/.elan/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
