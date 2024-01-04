@@ -35,7 +35,7 @@ ln -s "$POS/.vimrc" "$HOME/.vimrc"
 ln -s "$POS/.zshenv" "$HOME/.zshenv"
 ln -s "$POS/.zsh_profile" "$HOME/.zsh_profile"
 ln -s "$POS/.zshrc" "$HOME/.zshrc"
-ln -s "$POS/.alacritty.yml" "$HOME/.alacritty.yml"
+ln -s "$POS/.alacritty.toml" "$HOME/.alacritty.toml"
 ln -s "$POS/betterlockscreen/betterlockscreenrc" "$HOME/.config/betterlockscreenrc"
 
 # Config folders
