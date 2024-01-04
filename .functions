@@ -21,8 +21,9 @@ git_diff() {
 # Repo: https://github.com/Yag000/templates
 
 init_rust_project(){
-    cargo init $1
-    cd $1
+    [ $# -eq 0 ] && file="." || file=$1
+    cargo init $file
+    cd $file
     cp -r $HOME/.config/templates/rust/.* .
 }
 
@@ -36,8 +37,7 @@ init_ocaml_project(){
 }
 
 init_c_project(){
-    mkdir $1
-    cd $1
+    [ $# -eq 1 ] && mkdir $1 && cd $1
     cp -r $HOME/.config/templates/c/.* .
     cp -r $HOME/.config/templates/c/* .
 }
