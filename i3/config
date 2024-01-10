@@ -277,7 +277,7 @@ set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #fff8ea
 set $inactive-text-color #5c6270
-set $urgent-bg-color     cbb3ff
+set $urgent-bg-color     #cbb3ff
 set $default-indicator   #00ff00
 
 set $current-accent-color  #eebebe
