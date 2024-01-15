@@ -1,15 +1,3 @@
-# OCaml
-dune_exec(){
-    eval $(opam env) && dune build bin/main.exe && dune exec bin/main.exe
-}
-
-
-# Advent of Code
-initialize_day_repo_ocaml(){
-    mkdir $1 && touch $1/$1.ml && touch $1/dune
-}
-
-
 # Quick git diff from: https://medium.com/@GroundControl/better-git-diffs-with-fzf-89083739a9cb 
 git_diff() {
   preview="git diff $@ --color=always -- {-1}"
@@ -17,38 +5,39 @@ git_diff() {
 }
 
 
-# This needs you to have cloned the templates repo in $HOME/Projects/templates 
+# This needs you to have cloned the templates repo in $HOME/Templates
 # Repo: https://github.com/Yag000/templates
+# The repo has a makefile that copies the templates to the right place
 
 init_rust_project(){
     [ $# -eq 0 ] && file="." || file=$1
     cargo init $file
     cd $file
-    cp -r $HOME/.config/templates/rust/.* .
+    cp -r $HOME/Templates/rust/.* .
 }
 
 init_ocaml_project(){
-    dune init project $1
-    cd $1
+    dune init project "$1"
+    cd "$1"
     git init
-    cp -r $HOME/.config/templates/ocaml/.* .
-    cp -r $HOME/.config/templates/ocaml/* .
-    mv template.opam $1.opam
+    cp -r $HOME/Templates/ocaml/.* .
+    cp -r $HOME/Templates/ocaml/* .
+    mv template.opam "$1.opam"
     git init
 }
 
 init_c_project(){
     [ $# -eq 1 ] && mkdir $1 && cd $1
-    cp -r $HOME/.config/templates/c/.* .
-    cp -r $HOME/.config/templates/c/* .
+    cp -r $HOME/Templates/c/.* .
+    cp -r $HOME/Templates/c/* .
     git init
 }
 
 
 init_latex_project(){
     [ $# -eq 1 ] && mkdir "$1" && cd "$1"
-    cp -r $HOME/.config/templates/latex/.* .
-    cp -r $HOME/.config/templates/latex/* .
-    mv Main.tx "$1.tex"
+    cp -r $HOME/Templates/latex/.* .
+    cp -r $HOME/Templates/latex/* .
+    mv Main.tex "$1.tex"
     git init
 }
