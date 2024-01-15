@@ -34,10 +34,18 @@ init_ocaml_project(){
     cp -r $HOME/.config/templates/ocaml/.* .
     cp -r $HOME/.config/templates/ocaml/* .
     mv template.opam $1.opam
-}
 
 init_c_project(){
     [ $# -eq 1 ] && mkdir $1 && cd $1
     cp -r $HOME/.config/templates/c/.* .
     cp -r $HOME/.config/templates/c/* .
+}
+
+
+init_latex_project(){
+    [ $# -eq 1 ] && mkdir "$1" && cd "$1"
+    cp -r $HOME/.config/templates/latex/.* .
+    cp -r $HOME/.config/templates/latex/* .
+    mv Main.tx "$1.tex"
+    git init
 }
