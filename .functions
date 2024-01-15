@@ -34,11 +34,14 @@ init_ocaml_project(){
     cp -r $HOME/.config/templates/ocaml/.* .
     cp -r $HOME/.config/templates/ocaml/* .
     mv template.opam $1.opam
+    git init
+}
 
 init_c_project(){
     [ $# -eq 1 ] && mkdir $1 && cd $1
     cp -r $HOME/.config/templates/c/.* .
     cp -r $HOME/.config/templates/c/* .
+    git init
 }
 
 
