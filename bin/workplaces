@@ -1,14 +1,13 @@
 #!/usr/bin/bash
 
+# List all the workplaces, one per line, they will be searched for git repositories
+workplaces_index=~/dotfiles/ressources/workplaces_index.txt
 
-workplaces_file=~/dotfiles/ressources/workplaces.txt
+# List all the individual workplaces, line by line
+workplaces_individual=~/dotfiles/ressources/workplaces_individual.txt
 
-if [[ $# -eq 1 ]]; then
-    [[ -z $workplaces_file ]] || touch $workplaces_file
-    cat $workplaces_file
-else
-    find ~/Documents/l3_math-info/s5/PPO5/fork_thomas/ ~/Documents/l3_math-info/s5/PPO5/forks/ ~/Documents/l3_math-info/s5 ~/Documents/l2_math-info/s4 ~/Projects -maxdepth 3 -name .git -exec dirname {} \; -prune > $workplaces_file
-    cat $workplaces_file
-    echo "$HOME/dotfiles"
-    echo "$HOME/tmp"
-fi
+cat $workplaces_index | while read file; do
+    find "$file" -maxdepth 3 -type d -name .git -exec dirname {} \; -prune 
+done
+
+cat $workplaces_individual
