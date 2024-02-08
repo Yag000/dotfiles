@@ -29,7 +29,7 @@ fi
 cd "$selected" || exit 1
 
 # Get the last two parts of the path
-selected_name=$(echo "$selected" | awk -F '/' '{print $(NF-1) "/" $NF}' | tr " " "_" | tr "/" "_")
+selected_name=$(echo "$selected" | awk -F '/' '{print $(NF-1) "/" $NF}' | tr " " "_" | tr "/" "_" | tr "." "_")
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
