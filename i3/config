@@ -344,7 +344,7 @@ exec_always --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "li
 bindsym $mod+Shift+u exec  --no-startup-id alacritty --hold -e yay -Syu | tee /tmp/yay-update"$(date +"%Y-%m-%d_%H:%M:%S")".log
 
 # Quick links
-bindsym $mod+Shift+s exec --no-startup-id "$HOME/dotfiles/rofi/quick-links.sh"
+bindsym $mod+Shift+s exec --no-startup-id [[ -x quick-links-rofi ]] && quick-links-rofi || .cargo/bin/quick-links-rofi
 
 # Wifi menu (WIP) nmtui for now but will be replaced with a rofi power-menu
 bindsym $mod+w exec --no-startup-id "alacritty -e nmtui"

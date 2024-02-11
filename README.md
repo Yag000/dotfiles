@@ -5,6 +5,7 @@ My personal dotfiles
 ## Dependencies
 
 - **wallshift** : <https://github.com/Yag000/wallshift>
+- **quick-links** : <https://github.com/Yag000/quick-links-rofi>
 - **i3**: <https://i3wm.org/>
 - **rofi**: <https://github.com/davatorium/rofi>
 - **polybar**: <https://github.com/polybar/polybar>

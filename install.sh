@@ -16,13 +16,17 @@ mv "$HOME/.zsh_profile" "$HOME/.old_dotfiles"
 mv "$HOME/.zshrc" "$HOME/.old_dotfiles"
 mv "$HOME/.alacritty.yml" "$HOME/.old_dotfiles"
 mv "$HOME/.config/betterlockscreenrc" "$HOME/.old_dotfiles"
-mv "$HOME/.config/wallshift" "$HOME/.old_dotfiles"
+mv "$HOME/.config/quick-links/config.yml" "$HOME/.old_dotfiles"
+mv "$HOME/.config/quick-links/theme.rasi" "$HOME/.old_dotfiles"
+mv "$HOME/.config/quick-links/catppuccin-frappe.rasi" "$HOME/.old_dotfiles"
+mv "$HOME/.config/quick-links/powermenu-fonts.rasi" "$HOME/.old_dotfiles"
 
 # Config folders
 mv "$HOME/.config/nvim" "$HOME/.old_dotfiles"
 mv "$HOME/.config/i3" "$HOME/.old_dotfiles"
 mv "$HOME/.config/picom" "$HOME/.old_dotfiles"
 mv "$HOME/.config/dunst" "$HOME/.old_dotfiles"
+mv "$HOME/.config/wallshift" "$HOME/.old_dotfiles"
 
 # Create copies of the old configuration files before installation
 ln -s "$POS/.aliases" "$HOME/.aliases"
@@ -37,6 +41,10 @@ ln -s "$POS/.zsh_profile" "$HOME/.zsh_profile"
 ln -s "$POS/.zshrc" "$HOME/.zshrc"
 ln -s "$POS/.alacritty.toml" "$HOME/.alacritty.toml"
 ln -s "$POS/betterlockscreen/betterlockscreenrc" "$HOME/.config/betterlockscreenrc"
+ln -s "$POS/quick-links/config.yml" "$HOME/.config/quick-links/config.yml"
+ln -s "$POS/quick-links/theme.rasi" "$HOME/.config/quick-links/theme.rasi"
+ln -s "$POS/rofi/catppuccin-frappe.rasi" "$HOME/.config/quick-links/catppuccin-frappe.rasi"
+ln -s "$POS/rofi/powermenu-fonts.rasi" "$HOME/.config/quick-links/powermenu-fonts.rasi"
 
 # Config folders
 ln -s "$POS/nvim" "$HOME/.config/nvim"
