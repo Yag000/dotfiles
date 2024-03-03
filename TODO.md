@@ -11,9 +11,7 @@
 
 ## Neovim
 
-- [ ] Markdown preview (I doubt it)
 - [ ] clippy for rust
-- [ ] Setup for git commit history etc...
 
 ## zsh
 
@@ -66,6 +64,8 @@
 - [x] Markdown linting
 - [x] Markdown formatting
 - [x] Rename
+- [x] Markdown preview (I doubt it)
+- [x] Setup for git commit history etc...
 
 ### zsh
 
