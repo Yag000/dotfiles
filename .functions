@@ -10,34 +10,18 @@ git_diff() {
 # The repo has a makefile that copies the templates to the right place
 
 init_rust_project(){
-    [ $# -eq 0 ] && file="." || file=$1
-    cargo init $file
-    cd $file
-    cp -r $HOME/Templates/rust/.* .
+    $HOME/Templates/init_project.sh rust $1
 }
 
 init_ocaml_project(){
-    dune init project "$1"
-    cd "$1"
-    git init
-    cp -r $HOME/Templates/ocaml/.* .
-    cp -r $HOME/Templates/ocaml/* .
-    mv template.opam "$1.opam"
-    git init
+    $HOME/Templates/init_project.sh ocaml $1
 }
 
 init_c_project(){
-    [ $# -eq 1 ] && mkdir $1 && cd $1
-    cp -r $HOME/Templates/c/.* .
-    cp -r $HOME/Templates/c/* .
-    git init
+    $HOME/Templates/init_project.sh c $1
 }
 
 
 init_latex_project(){
-    [ $# -eq 1 ] && mkdir "$1" && cd "$1"
-    cp -r $HOME/Templates/latex/.* .
-    cp -r $HOME/Templates/latex/* .
-    mv Main.tex "$1.tex"
-    git init
+    $HOME/Templates/init_project.sh latex $1
 }
