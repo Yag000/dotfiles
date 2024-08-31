@@ -1,6 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
 source ~/.profile
+source ~/.aliases
 
 # Reset path (or else it gets longer each time this is sourced)
 export PATH=$(getconf PATH)

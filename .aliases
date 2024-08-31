@@ -1,12 +1,5 @@
 # Usage: Aliases for bash
 
-# Aliases
-
-# Go to directory
-## University
-
-## Personal
-
 # Fast access to programs
 
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
@@ -20,5 +13,3 @@ alias removeclass="rm -r *.class"
 
 # Personal
 source $HOME/dotfiles/My_scripts/.my_scripts_aliases
-
-
