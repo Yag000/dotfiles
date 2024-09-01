@@ -1,5 +1,9 @@
 input_file: /home/yago/.config/quick-links/links.txt
 theme: /home/yago/.config/quick-links/theme.rasi
 separator: ','
-workspace_number: 1
+
+workspace_switcher:
+  i3:
+    workspace_number: 1
+
 browser_command_name: firefox
