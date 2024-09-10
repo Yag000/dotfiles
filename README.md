@@ -35,6 +35,7 @@ My personal dotfiles
 - **lf**
 - **zoxide** : <https://github.com/ajeetdsouza/zoxide#installation>
 - **ripgrep**
+- https://github.com/catppuccin/zsh-syntax-highlighting
 - Many others that I have no yet listed,  sorry :(
 
 ## Installation

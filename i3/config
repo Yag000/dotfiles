@@ -336,8 +336,8 @@ exec "$HOME/dotfiles/bin/keyboard_layout_toggle --reset"
 # For this to work you need to install autotiling  (https://github.com/nwg-piotr/autotiling)
 exec_always --no-startup-id autotiling 
 
-# Natural scrolling for my touchpad
-exec_always --no-startup-id xinput set-prop "04CA00A0:00 04CA:00A0 Touchpad" "libinput Natural Scrolling Enabled" 1
+# Natural scrolling for my touchpad (this needs personnalisation)
+exec_always --no-startup-id xinput set-prop 9 "libinput Natural Scrolling Enabled" 1
 
 
 # Quick package manager update 
