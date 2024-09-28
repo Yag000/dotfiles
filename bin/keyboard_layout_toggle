@@ -59,10 +59,10 @@ fi
 
 # Change the keyboard layout
 if [ "$new_layout" = "" ]; then
-    if [ "$current_layout" = "es" ]; then
+    if [ "$current_layout" = "fr" ]; then
         new_layout="eu"
     else
-        new_layout="es"
+        new_layout="fr"
     fi
 fi
 
