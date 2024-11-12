@@ -135,5 +135,7 @@ export PATH="$HOME/dotfiles/bin/:$HOME/.local/bin:$HOME/.elan/bin:$HOME/go/bin:$
 # opam configuration
 [[ ! -r $HOME/.opam/opam-init/init.zsh ]] || source $HOME/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
+eval $(opam env)
+
 eval "$(zoxide init zsh)"
 export PATH=$PATH:$HOME/.spicetify
