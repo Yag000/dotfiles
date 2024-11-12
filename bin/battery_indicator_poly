@@ -43,7 +43,11 @@ function print_text(){
             text="%{F#c6d0f5}󰁹"
         fi
     else
-        text="%{F#c6d0f5}󰂄"
+        if [ "$percent" -eq 69 ]; then
+            text="%{F#c6d0f5}󰂄 Nice"
+        else
+            text="%{F#c6d0f5}󰂄"
+        fi
     fi
 
     # ---------------------------
