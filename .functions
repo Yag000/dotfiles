@@ -1,7 +1,22 @@
+
+find_git() {
+    local dir="$(pwd)"
+    while [ "$dir" != "/" ]; do 
+        if [ -d "$dir/.git" ]; then
+            cd "$dir" || return 1 
+            return 0 
+        fi
+        dir="$(dirname "$dir")"
+    done
+    return 1 
+}
+
 # Quick git diff from: https://medium.com/@GroundControl/better-git-diffs-with-fzf-89083739a9cb 
 git_diff() {
-  preview="git diff $@ --color=always -- {-1}"
-  git diff $@ --name-only | fzf -m --ansi --preview $preview
+    (find_git &&
+    (preview="git diff $@ --color=always -- {-1}"
+    git diff $@ --name-only | fzf -m --ansi --preview $preview)
+    )
 }
 
 
