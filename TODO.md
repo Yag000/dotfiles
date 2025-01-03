@@ -8,29 +8,6 @@
 
 - [ ] Add notification applet
 - [ ] Split i3 config file (probably not)
-
-## Neovim
-
-- [ ] clippy for rust
-
-## zsh
-
-## tmux
-
-- [ ] Shortcut for clearing the terminal
-- [ ] Solve issue with empty padding on the bottom
-- [ ] shortcut to swap window
-- [ ] Improve theme icons
-
-## Other
-
-- [ ] Calendar
-- [ ] Change terminal zoom depending on the monitor
-
-## Already done
-
-### i3
-
 - [x] Natural scrolling
 - [x] Change date applet to show the date in different formats (clickable)
 - [x] Add i3block for keyboard layout (clickable)
@@ -54,8 +31,9 @@
 - [x] Changing wallpaper every X minutes
 - [x] Betterlockscreen
 
-### Neovim
+## Neovim
 
+- [ ] clippy for rust
 - [x] git diff (Good enough for now)
 - [x] Fast git commit and push/pull (keybinds)
 - [x] Fast git push upstream (keybind)
@@ -67,20 +45,26 @@
 - [x] Markdown preview (I doubt it)
 - [x] Setup for git commit history etc...
 
-### zsh
+## zsh
 
 - [x] Update go aliases
 - [x] Update aliases
 
-### tmux
+## tmux
 
+- [ ] Shortcut for clearing the terminal
+- [x] Solve issue with empty padding on the bottom
+- [ ] shortcut to swap window
+- [x] Improve theme icons
 - [x] Make tmux theme work
 - [x] Improve tmux sessions (searching them)
 - [x] Improve tmux-sessionizer speed
 - [x] zoxide + tmux-sessionizer does not work correctly (there is not an update for the queries)
 
-### Other
+## Other
 
+- [ ] Calendar
+- [ ] Change terminal zoom depending on the monitor
 - [x] win + shift + w to change wallpaper
 - [x] Suspend does not work due to the 30s delay of locking...
 - [x] Improve wallpapers (for example simulate a pacman game etc...)
