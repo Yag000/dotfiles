@@ -11,5 +11,7 @@ alias v="nvim"
 
 alias removeclass="rm -r *.class"
 
+alias shada="rm  ~/.local/state/nvim/shada/*"
+
 # Personal
 source $HOME/dotfiles/My_scripts/.my_scripts_aliases

@@ -46,8 +46,8 @@ bindsym Shift+XF86MonBrightnessUp exec xbacklight -inc 1 # increase screen brigh
 bindsym Shift+XF86MonBrightnessDown exec xbacklight -dec 1 # decrease screen brightness
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+# bindsym XF86AudioPlay exec playerctl play
+# bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
@@ -302,15 +302,29 @@ bindsym $mod+shift+x exec $HOME/dotfiles/bin/power-menu
 # Keyboard toggle
 bindsym $mod+Shift+t exec $HOME/dotfiles/bin/keyboard_layout_toggle 
 
+
+
+## The correct way is using Print, but idk why my Impr key is mapped to Pause, so I have both of them
+
 ## Screenshots
+bindsym XF86AudioPause  exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
+bindsym $mod+XF86AudioPause  exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
+bindsym Shift+XF86AudioPause    exec --no-startup-id maim --select "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
+
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
 bindsym Shift+Print exec --no-startup-id maim --select "$HOME/Pictures/Screenshots/$(date +"%Y-%m-%d_%H:%M:%S").png"
 
 ## Clipboard Screenshots
+bindsym Ctrl+XF86AudioPause   exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+XF86AudioPause   exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+XF86AudioPause  exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+
 
 
 ## Compositor
@@ -337,7 +351,8 @@ exec "$HOME/dotfiles/bin/keyboard_layout_toggle --reset"
 exec_always --no-startup-id autotiling 
 
 # Natural scrolling for my touchpad (this needs personnalisation)
-exec_always --no-startup-id xinput set-prop 9 "libinput Natural Scrolling Enabled" 1
+exec_always --no-startup-id xinput set-prop "PNP0C50:00 04CA:00B1 Touchpad" "libinput Natural Scrolling Enabled" 1 
+exec_always --no-startup-id "xinput set-prop 9 332 0"
 
 
 # Quick package manager update 
