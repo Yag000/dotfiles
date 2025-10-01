@@ -7,7 +7,7 @@ workplaces_index=~/dotfiles/ressources/workplaces_index.txt
 workplaces_individual=~/dotfiles/ressources/workplaces_individual.txt
 
 cat $workplaces_index | while read file; do
-    find "$file" -maxdepth 3 -type d -name .git -exec dirname {} \; -prune 
+    find "$file" -maxdepth 2 -type d -name .git -exec dirname {} \; -prune 
 done
 
 cat $workplaces_individual

@@ -331,8 +331,9 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 
 ## Wallpaper
-exec --no-startup-id [[ -x wallshift ]] && wallshift || .cargo/bin/wallshift 
-bindsym $mod+Shift+w exec --no-startup-id [[ -x wallshift ]] && wallshift -t || .cargo/bin/wallshift -t 
+exec --no-startup-id [[ -x wallshift ]] && (wallshift --resume && wallshift) || (.cargo/bin/wallshift --resume && .cargo/bin/wallshift )
+bindsym $mod+Shift+w exec --no-startup-id [[ -x wallshift ]] && (wallshift --resume && wallshift -t) || ( .cargo/bin/wallshift --resume &&  .cargo/bin/wallshift -t) 
+bindsym $mod+w exec --no-startup-id [[ -x wallshift ]] && (wallshift --resume && wallshift --set /home/yago/Pictures/plain_color.png && wallshift --stop) || (.cargo/bin/wallshift --resume && .cargo/bin/wallshift --set /home/yago/Pictures/plain_color.png && .cargo/bin/wallshift  --stop)
 
 
 # Start applications
@@ -362,7 +363,7 @@ bindsym $mod+Shift+u exec  --no-startup-id alacritty --hold -e yay -Syu | tee /t
 bindsym $mod+Shift+s exec --no-startup-id [[ -x quick-links-rofi ]] && quick-links-rofi || .cargo/bin/quick-links-rofi
 
 # Wifi menu (WIP) nmtui for now but will be replaced with a rofi power-menu
-bindsym $mod+w exec --no-startup-id "alacritty -e nmtui"
+# bindsym $mod+w exec --no-startup-id "alacritty -e nmtui"
 
 # Mute audio on startup
 exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ 1

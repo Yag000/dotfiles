@@ -92,6 +92,7 @@ plugins=(
     zsh-autocomplete
     you-should-use
     colored-man-pages
+    autoupdate
 )
 
 source $ZSH/oh-my-zsh.sh

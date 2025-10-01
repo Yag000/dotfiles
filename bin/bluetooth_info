@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Get device MAC addresses
+# sample line: Device XX:XX:XX:XX:XX:XX Name
+mapfile -t devs < <(bluetoothctl devices 2>/dev/null | awk '{print $2}')
+
+# if no devices known, nothing is connected
+[[ ${#devs[@]} -eq 0 ]] && return 0
+
+for mac in "${devs[@]}"; do
+# Query device info and check for "Connected: yes"
+    if bluetoothctl info "$mac" 2>/dev/null | grep -q -i '^ *Connected: *yes'; then
+      printf '%s\n' ""
+      return 0
+    fi
+done
+
+printf '%s\n' ""
+
+exit 0
+
