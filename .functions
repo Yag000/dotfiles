@@ -41,6 +41,6 @@ init_latex_project(){
     $HOME/Templates/init_project.sh latex $1
 }
 
-init_coq_project(){
-    $HOME/Templates/init_project.sh coq $1
+init_rocq_project(){
+    $HOME/Templates/init_project.sh rocq $1
 }
