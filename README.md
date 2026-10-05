@@ -23,7 +23,7 @@ My personal dotfiles
 - **font-awesome**
 - **zsh-autosuggestions**
 - **zsh-history-substring-search**
-- **zsh-syntax-highlighting**
+- **zsh-syntax-highlighting** : <https://github.com/catppuccin/zsh-syntax-highlighting>
 - **zsh-autocomplete**
 - **you-should-use**
 - **autotiling** <https://github.com/nwg-piotr/autotiling>
@@ -35,7 +35,8 @@ My personal dotfiles
 - **lf**
 - **zoxide** : <https://github.com/ajeetdsouza/zoxide#installation>
 - **ripgrep**
-- https://github.com/catppuccin/zsh-syntax-highlighting
+- **powerlevel10k**
+- **autoupdate** : <https://github.com/tamcore/autoupdate-oh-my-zsh-plugins>
 - Many others that I have no yet listed,  sorry :(
 
 ## Installation
